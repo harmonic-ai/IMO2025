@@ -1,0 +1,1271 @@
+# Problem setup:
+
+## Points
+
+- A(3.9278, -42.3386)
+- B(35.3358, -140.2697)
+- C(-14.0945, -102.1207)
+- D(185.8923, -37.9818)
+- E(91.4668, -99.5933)
+- F(154.8258, -141.0330)
+- H(90.3935, -84.0656)
+- M(38.3139, -85.3125)
+- N(95.5516, -66.9555)
+- O(94.9352, -163.4463)
+- P(96.4104, -102.8267)
+- W(147.7521, -82.6922)
+- X(129.9377, -109.9294)
+
+## Assumptions:
+
+[C0] : AM = CM
+[C1] : P is the circumcenter of the circle ●ACD
+[C2] : AM = EM
+[C3] : A, E, P are collinear
+[C4] : C, M, N are collinear
+[C5] : D, M, N are collinear
+[C6] : AN = BN
+[C7] : FN = AN
+[C8] : O is the circumcenter of the circle ●BEF
+[C9] : A, F, P are collinear
+[C10] : AM = BM
+[C11] : DN = AN
+[C12] : W is the circumcenter of the circle ●DEF
+[C13] : AP ∥ HX
+[C14] : HX ⟂ OX
+[C15] : HM ⟂ NP
+[C16] : HP ⟂ MN
+
+## Numerical checks
+
+[N0] : ▲AEM has the same orientation as ▲CDP
+[N1] : ▲ACM has the same orientation as ▲ACM
+[N2] : ▲ACP has the same orientation as ▲ACP
+[N3] : ▲AEM has the same orientation as ▲AEM
+[N4] : ▲CDP has the same orientation as ▲CDP
+[N5] : A, E are all distinct
+[N6] : A, P are all distinct
+[N7] : E, P are all distinct
+[N8] : C, M are all distinct
+[N9] : C, N are all distinct
+[N10] : M, N are all distinct
+[N11] : D, M are all distinct
+[N12] : D, N are all distinct
+[N13] : C, D are all distinct
+[N14] : ▲ABE has the same orientation as ▲BON
+[N15] : ▲ABN has the same orientation as ▲ABN
+[N16] : ▲AFN has the same orientation as ▲AFN
+[N17] : ▲BEO has the same orientation as ▲BEO
+[N18] : ▲BFN has the same orientation as ▲BFN
+[N19] : ▲BFO has the same orientation as ▲BFO
+[N20] : ▲EFO has the same orientation as ▲EFO
+[N21] : A, F are all distinct
+[N22] : F, P are all distinct
+[N23] : E, F are all distinct
+[N24] : ▲ABM has the same orientation as ▲BOF
+[N25] : ▲BEM has the same orientation as ▲BEM
+[N26] : ▲BEM has the same orientation as ▲BFN
+[N27] : ▲ABM has the same orientation as ▲ABM
+[N28] : ▲AMN has the same orientation as ▲BFE
+[N29] : ▲CDP has the same orientation as ▲EXF
+[N30] : ▲ADN has the same orientation as ▲ADN
+[N31] : ▲ADP has the same orientation as ▲ADP
+[N32] : ▲DFN has the same orientation as ▲DFN
+[N33] : ▲DFW has the same orientation as ▲DFW
+[N34] : ▲EFW has the same orientation as ▲EFW
+[N35] : D, M, W are not collinear
+[N36] : ▲DEW has the same orientation as ▲DEW
+[N37] : ▲DNW has the same orientation as ▲FWN
+[N38] : ▲EOX has the same orientation as ▲FXO
+[N39] : ▲CEM has the same orientation as ▲CEM
+[N40] : C, M, P are not collinear
+[N41] : ▲EOW has the same orientation as ▲FWO
+[N42] : O, W are all distinct
+[N43] : O, X are all distinct
+[N44] : W, X are all distinct
+[N45] : H, N, X are not collinear
+[N46] : D, N, P are not collinear
+[N47] : H, M are all distinct
+[N48] : H, W are all distinct
+[N49] : M, W are all distinct
+[N50] : F, N are all distinct
+[N51] : F, X are all distinct
+[N52] : N, X are all distinct
+[N53] : ▲EOX has the same orientation as ▲MON
+[N54] : ▲ABF has the same orientation as ▲BOM
+[N55] : ▲AMN has the same orientation as ▲BNM
+[N56] : B, E, F are not collinear
+[N57] : ∠(NMC) is an obtuse angle
+[N58] : ∠(MND) is an obtuse angle
+
+
+# Goals
+
+OX = BO : Proved [150]
+∠(NMC) is an obtuse angle : Proved [N57]
+∠(MND) is an obtuse angle : Proved [N58]
+
+
+# Proof:
+
+000. | AM = CM [C0] =(AR Deduction)> AM:CM = CM:AM [0]
+001. | ∠(AM,CM) = ∠(AM,CM) [T0], AM:CM = CM:AM [0], ▲ACM has the same orientation as ▲ACM [N1] =(r63 SAS Similarity of triangles (Reverse))> ▲ACM ≅ ▲CAM [1]
+002. | ▲ACM has the same orientation as ▲ACM [N1], ▲ACM ≅ ▲CAM [1] =(r53 Properties of similar triangles (Reverse))> ∠(AC,AM) = ∠(CM,AC) [2]
+003. | P is the circumcenter of the circle ●ACD [C1] =(r72 Disassembling a circle)> AP = CP [3]
+004. | AP = CP [3] =(AR Deduction)> AP:CP = CP:AP [4]
+005. | ∠(AP,CP) = ∠(AP,CP) [T1], AP:CP = CP:AP [4], ▲ACP has the same orientation as ▲ACP [N2] =(r63 SAS Similarity of triangles (Reverse))> ▲ACP ≅ ▲CAP [5]
+006. | ▲ACP has the same orientation as ▲ACP [N2], ▲ACP ≅ ▲CAP [5] =(r53 Properties of similar triangles (Reverse))> ∠(AC,AP) = ∠(CP,AC) [6]
+007. | AM = EM [C2] =(AR Deduction)> AM:EM = EM:AM [7]
+008. | ∠(AM,EM) = ∠(AM,EM) [T2], AM:EM = EM:AM [7], ▲AEM has the same orientation as ▲AEM [N3] =(r63 SAS Similarity of triangles (Reverse))> ▲AEM ≅ ▲EAM [8]
+009. | ▲AEM has the same orientation as ▲AEM [N3], ▲AEM ≅ ▲EAM [8] =(r53 Properties of similar triangles (Reverse))> ∠(AE,AM) = ∠(EM,AE) [9]
+010. | P is the circumcenter of the circle ●ACD [C1] =(r72 Disassembling a circle)> DP = AP [10]
+011. | AP = CP [3], DP = AP [10] =(AR Deduction)> CP:DP = DP:CP [11]
+012. | ∠(CP,DP) = ∠(CP,DP) [T3], CP:DP = DP:CP [11], ▲CDP has the same orientation as ▲CDP [N4] =(r63 SAS Similarity of triangles (Reverse))> ▲CDP ≅ ▲DCP [12]
+013. | ▲CDP has the same orientation as ▲CDP [N4], ▲CDP ≅ ▲DCP [12] =(r53 Properties of similar triangles (Reverse))> ∠(CD,CP) = ∠(DP,CD) [13]
+014. | A, E, P are collinear [C3], A, E are all distinct [N5], A, P are all distinct [N6], E, P are all distinct [N7] =(r82 Parallel from collinear)> AP ∥ AE [14]
+015. | C, M, N are collinear [C4], C, M are all distinct [N8], C, N are all distinct [N9], M, N are all distinct [N10] =(r82 Parallel from collinear)> CM ∥ MN [15]
+016. | D, M, N are collinear [C5], D, M are all distinct [N11], D, N are all distinct [N12], M, N are all distinct [N10] =(r82 Parallel from collinear)> DN ∥ DM [16]
+017. | D, M, N are collinear [C5], D, M are all distinct [N11], D, N are all distinct [N12], M, N are all distinct [N10] =(r82 Parallel from collinear)> DN ∥ MN [17]
+018. | CM ∥ MN [15], DN ∥ DM [16], DN ∥ MN [17] =(AR Deduction)> CM ∥ DM [18]
+019. | CM ∥ DM [18] =(r28 Overlapping parallels)> C, D, M are collinear [19]
+020. | C, D, M are collinear [19], C, D are all distinct [N13], C, M are all distinct [N8], D, M are all distinct [N11] =(r82 Parallel from collinear)> CD ∥ CM [20]
+021. | ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AE,AM) = ∠(EM,AE) [9], ∠(CD,CP) = ∠(DP,CD) [13], AP ∥ AE [14], CD ∥ CM [20] =(AR Deduction)> ∠(AM,EM) = ∠(CP,DP) [21]
+022. | AM = EM [C2], AP = CP [3], DP = AP [10] =(AR Deduction)> AM:CP = EM:DP [22]
+023. | ∠(AM,EM) = ∠(CP,DP) [21], AM:CP = EM:DP [22], ▲AEM has the same orientation as ▲CDP [N0] =(r62 SAS Similarity of triangles (Direct))> ▲AEM ≅ ▲CDP [23]
+024. | ▲AEM has the same orientation as ▲CDP [N0], ▲AEM ≅ ▲CDP [23] =(r52 Properties of similar triangles (Direct))> AE:AM = CD:CP [24]
+025. | AN = BN [C6] =(AR Deduction)> AN:BN = BN:AN [25]
+026. | ∠(AN,BN) = ∠(AN,BN) [T4], AN:BN = BN:AN [25], ▲ABN has the same orientation as ▲ABN [N15] =(r63 SAS Similarity of triangles (Reverse))> ▲ABN ≅ ▲BAN [26]
+027. | ▲ABN has the same orientation as ▲ABN [N15], ▲ABN ≅ ▲BAN [26] =(r53 Properties of similar triangles (Reverse))> ∠(AB,AN) = ∠(BN,AB) [27]
+028. | FN = AN [C7] =(AR Deduction)> AN:FN = FN:AN [28]
+029. | ∠(AN,FN) = ∠(AN,FN) [T5], AN:FN = FN:AN [28], ▲AFN has the same orientation as ▲AFN [N16] =(r63 SAS Similarity of triangles (Reverse))> ▲AFN ≅ ▲FAN [29]
+030. | ▲AFN has the same orientation as ▲AFN [N16], ▲AFN ≅ ▲FAN [29] =(r53 Properties of similar triangles (Reverse))> ∠(AF,AN) = ∠(FN,AF) [30]
+031. | O is the circumcenter of the circle ●BEF [C8] =(r72 Disassembling a circle)> EO = BO [31]
+032. | EO = BO [31] =(AR Deduction)> BO:EO = EO:BO [32]
+033. | ∠(BO,EO) = ∠(BO,EO) [T6], BO:EO = EO:BO [32], ▲BEO has the same orientation as ▲BEO [N17] =(r63 SAS Similarity of triangles (Reverse))> ▲BEO ≅ ▲EBO [33]
+034. | ▲BEO has the same orientation as ▲BEO [N17], ▲BEO ≅ ▲EBO [33] =(r53 Properties of similar triangles (Reverse))> ∠(BE,BO) = ∠(EO,BE) [34]
+035. | AN = BN [C6], FN = AN [C7] =(AR Deduction)> BN:FN = FN:BN [35]
+036. | ∠(BN,FN) = ∠(BN,FN) [T7], BN:FN = FN:BN [35], ▲BFN has the same orientation as ▲BFN [N18] =(r63 SAS Similarity of triangles (Reverse))> ▲BFN ≅ ▲FBN [36]
+037. | ▲BFN has the same orientation as ▲BFN [N18], ▲BFN ≅ ▲FBN [36] =(r53 Properties of similar triangles (Reverse))> ∠(BF,BN) = ∠(FN,BF) [37]
+038. | O is the circumcenter of the circle ●BEF [C8] =(r72 Disassembling a circle)> FO = BO [38]
+039. | FO = BO [38] =(AR Deduction)> BO:FO = FO:BO [39]
+040. | ∠(BO,FO) = ∠(BO,FO) [T8], BO:FO = FO:BO [39], ▲BFO has the same orientation as ▲BFO [N19] =(r63 SAS Similarity of triangles (Reverse))> ▲BFO ≅ ▲FBO [40]
+041. | ▲BFO has the same orientation as ▲BFO [N19], ▲BFO ≅ ▲FBO [40] =(r53 Properties of similar triangles (Reverse))> ∠(BF,BO) = ∠(FO,BF) [41]
+042. | EO = BO [31], FO = BO [38] =(AR Deduction)> EO:FO = FO:EO [42]
+043. | ∠(EO,FO) = ∠(EO,FO) [T9], EO:FO = FO:EO [42], ▲EFO has the same orientation as ▲EFO [N20] =(r63 SAS Similarity of triangles (Reverse))> ▲EFO ≅ ▲FEO [43]
+044. | ▲EFO has the same orientation as ▲EFO [N20], ▲EFO ≅ ▲FEO [43] =(r53 Properties of similar triangles (Reverse))> ∠(EF,EO) = ∠(FO,EF) [44]
+045. | A, F, P are collinear [C9], A, F are all distinct [N21], A, P are all distinct [N6], F, P are all distinct [N22] =(r82 Parallel from collinear)> AF ∥ AP [45]
+046. | AF ∥ AP [45], AP ∥ AE [14] =(AR Deduction)> AF ∥ AE [46]
+047. | AF ∥ AE [46] =(r28 Overlapping parallels)> A, E, F are collinear [47]
+048. | A, E, F are collinear [47], A, E are all distinct [N5], A, F are all distinct [N21], E, F are all distinct [N23] =(r82 Parallel from collinear)> AF ∥ EF [48]
+049. | ∠(AB,AN) = ∠(BN,AB) [27], ∠(AF,AN) = ∠(FN,AF) [30], ∠(BE,BO) = ∠(EO,BE) [34], ∠(BF,BN) = ∠(FN,BF) [37], ∠(BF,BO) = ∠(FO,BF) [41], ∠(EF,EO) = ∠(FO,EF) [44], AF ∥ EF [48] =(AR Deduction)> ∠(AB,BE) = ∠(BN,BO) [49]
+050. | AM = BM [C10], AM = EM [C2] =(AR Deduction)> BM:EM = EM:BM [50]
+051. | ∠(BM,EM) = ∠(BM,EM) [T10], BM:EM = EM:BM [50], ▲BEM has the same orientation as ▲BEM [N25] =(r63 SAS Similarity of triangles (Reverse))> ▲BEM ≅ ▲EBM [51]
+052. | ▲BEM has the same orientation as ▲BEM [N25], ▲BEM ≅ ▲EBM [51] =(r53 Properties of similar triangles (Reverse))> ∠(BE,BM) = ∠(EM,BE) [52]
+053. | ∠(AE,AM) = ∠(EM,AE) [9], ∠(BE,BM) = ∠(EM,BE) [52], ∠(BE,BO) = ∠(EO,BE) [34], ∠(EF,EO) = ∠(FO,EF) [44], AF ∥ AP [45], AF ∥ EF [48], AP ∥ AE [14] =(AR Deduction)> ∠(AM,BM) = ∠(FO,BO) [53]
+054. | AM = BM [C10], FO = BO [38] =(AR Deduction)> AM:BM = BO:FO [54]
+055. | ∠(AM,BM) = ∠(FO,BO) [53], AM:BM = BO:FO [54], ▲ABM has the same orientation as ▲BOF [N24] =(r63 SAS Similarity of triangles (Reverse))> ▲ABM ≅ ▲BFO [55]
+056. | ▲ABM has the same orientation as ▲BOF [N24], ▲ABM ≅ ▲BFO [55] =(r53 Properties of similar triangles (Reverse))> AB:AM = BF:BO [56]
+057. | AM = BM [C10] =(AR Deduction)> AM:BM = BM:AM [57]
+058. | ∠(AM,BM) = ∠(AM,BM) [T11], AM:BM = BM:AM [57], ▲ABM has the same orientation as ▲ABM [N27] =(r63 SAS Similarity of triangles (Reverse))> ▲ABM ≅ ▲BAM [58]
+059. | ▲ABM has the same orientation as ▲ABM [N27], ▲ABM ≅ ▲BAM [58] =(r53 Properties of similar triangles (Reverse))> ∠(AB,AM) = ∠(BM,AB) [59]
+060. | ∠(AB,AM) = ∠(BM,AB) [59], ∠(AB,AN) = ∠(BN,AB) [27], ∠(AE,AM) = ∠(EM,AE) [9], ∠(AF,AN) = ∠(FN,AF) [30], AF ∥ AP [45], AP ∥ AE [14] =(AR Deduction)> ∠(BM,EM) = ∠(BN,FN) [60]
+061. | AM = BM [C10], AM = EM [C2], AN = BN [C6], FN = AN [C7] =(AR Deduction)> BM:EM = FN:BN [61]
+062. | ∠(BM,EM) = ∠(BN,FN) [60], BM:EM = FN:BN [61], ▲BEM has the same orientation as ▲BFN [N26] =(r63 SAS Similarity of triangles (Reverse))> ▲BEM ≅ ▲FBN [62]
+063. | ▲BEM has the same orientation as ▲BFN [N26], ▲BEM ≅ ▲FBN [62] =(r53 Properties of similar triangles (Reverse))> BE:BF = BM:FN [63]
+064. | AM = BM [C10], AN = BN [C6], FN = AN [C7], AB:AM = BF:BO [56], BE:BF = BM:FN [63] =(AR Deduction)> AB:BE = BN:BO [64]
+065. | ∠(AB,BE) = ∠(BN,BO) [49], AB:BE = BN:BO [64], ▲ABE has the same orientation as ▲BON [N14] =(r62 SAS Similarity of triangles (Direct))> ▲ABE ≅ ▲NBO [65]
+066. | ▲ABE has the same orientation as ▲BON [N14], ▲ABE ≅ ▲NBO [65] =(r52 Properties of similar triangles (Direct))> AE:BE = NO:BO [66]
+067. | ∠(AB,AM) = ∠(BM,AB) [59], ∠(AB,AN) = ∠(BN,AB) [27], ∠(AE,AM) = ∠(EM,AE) [9], ∠(AF,AN) = ∠(FN,AF) [30], ∠(BE,BM) = ∠(EM,BE) [52], ∠(BF,BN) = ∠(FN,BF) [37], AF ∥ AP [45], AP ∥ AE [14] =(AR Deduction)> ∠(AM,AN) = ∠(BF,BE) [67]
+068. | AM = BM [C10], FN = AN [C7], BE:BF = BM:FN [63] =(AR Deduction)> AM:AN = BE:BF [68]
+069. | ∠(AM,AN) = ∠(BF,BE) [67], AM:AN = BE:BF [68], ▲AMN has the same orientation as ▲BFE [N28] =(r63 SAS Similarity of triangles (Reverse))> ▲AMN ≅ ▲BEF [69]
+070. | ▲AMN has the same orientation as ▲BFE [N28], ▲AMN ≅ ▲BEF [69] =(r53 Properties of similar triangles (Reverse))> AM:BE = MN:EF [70]
+071. | DN = AN [C11] =(AR Deduction)> AN:DN = DN:AN [71]
+072. | ∠(AN,DN) = ∠(AN,DN) [T12], AN:DN = DN:AN [71], ▲ADN has the same orientation as ▲ADN [N30] =(r63 SAS Similarity of triangles (Reverse))> ▲ADN ≅ ▲DAN [72]
+073. | ▲ADN has the same orientation as ▲ADN [N30], ▲ADN ≅ ▲DAN [72] =(r53 Properties of similar triangles (Reverse))> ∠(AD,AN) = ∠(DN,AD) [73]
+074. | DP = AP [10] =(AR Deduction)> AP:DP = DP:AP [74]
+075. | ∠(AP,DP) = ∠(AP,DP) [T13], AP:DP = DP:AP [74], ▲ADP has the same orientation as ▲ADP [N31] =(r63 SAS Similarity of triangles (Reverse))> ▲ADP ≅ ▲DAP [75]
+076. | ▲ADP has the same orientation as ▲ADP [N31], ▲ADP ≅ ▲DAP [75] =(r53 Properties of similar triangles (Reverse))> ∠(AD,AP) = ∠(DP,AD) [76]
+077. | DN = AN [C11], FN = AN [C7] =(AR Deduction)> DN:FN = FN:DN [77]
+078. | ∠(DN,FN) = ∠(DN,FN) [T14], DN:FN = FN:DN [77], ▲DFN has the same orientation as ▲DFN [N32] =(r63 SAS Similarity of triangles (Reverse))> ▲DFN ≅ ▲FDN [78]
+079. | ▲DFN has the same orientation as ▲DFN [N32], ▲DFN ≅ ▲FDN [78] =(r53 Properties of similar triangles (Reverse))> ∠(DF,DN) = ∠(FN,DF) [79]
+080. | W is the circumcenter of the circle ●DEF [C12] =(r72 Disassembling a circle)> FW = DW [80]
+081. | FW = DW [80] =(AR Deduction)> DW:FW = FW:DW [81]
+082. | ∠(DW,FW) = ∠(DW,FW) [T15], DW:FW = FW:DW [81], ▲DFW has the same orientation as ▲DFW [N33] =(r63 SAS Similarity of triangles (Reverse))> ▲DFW ≅ ▲FDW [82]
+083. | ▲DFW has the same orientation as ▲DFW [N33], ▲DFW ≅ ▲FDW [82] =(r53 Properties of similar triangles (Reverse))> ∠(DF,DW) = ∠(FW,DF) [83]
+084. | W is the circumcenter of the circle ●DEF [C12] =(r72 Disassembling a circle)> FW = EW [84]
+085. | FW = EW [84] =(AR Deduction)> EW:FW = FW:EW [85]
+086. | ∠(EW,FW) = ∠(EW,FW) [T16], EW:FW = FW:EW [85], ▲EFW has the same orientation as ▲EFW [N34] =(r63 SAS Similarity of triangles (Reverse))> ▲EFW ≅ ▲FEW [86]
+087. | ▲EFW has the same orientation as ▲EFW [N34], ▲EFW ≅ ▲FEW [86] =(r53 Properties of similar triangles (Reverse))> ∠(EF,EW) = ∠(FW,EF) [87]
+088. | ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AD,AN) = ∠(DN,AD) [73], ∠(AD,AP) = ∠(DP,AD) [76], ∠(AE,AM) = ∠(EM,AE) [9], ∠(AF,AN) = ∠(FN,AF) [30], ∠(CD,CP) = ∠(DP,CD) [13], ∠(DF,DN) = ∠(FN,DF) [79], ∠(DF,DW) = ∠(FW,DF) [83], ∠(EF,EW) = ∠(FW,EF) [87], AF ∥ EF [48], AP ∥ AE [14], CD ∥ CM [20], CM ∥ MN [15], DN ∥ DM [16], DN ∥ MN [17] =(AR Deduction)> ∠(DM,DW) = ∠(EM,EW) [88]
+089. | ∠(DM,DW) = ∠(EM,EW) [88], D, M, W are not collinear [N35] =(r04 Congruent angles are in a cyclic)> DEMW are cyclic [89]
+090. | DEMW are cyclic [89] =(r03 Arc determines internal angles)> ∠(DE,DW) = ∠(EM,MW) [90]
+091. | FW = DW [80], FW = EW [84] =(AR Deduction)> DW:EW = EW:DW [91]
+092. | ∠(DW,EW) = ∠(DW,EW) [T17], DW:EW = EW:DW [91], ▲DEW has the same orientation as ▲DEW [N36] =(r63 SAS Similarity of triangles (Reverse))> ▲DEW ≅ ▲EDW [92]
+093. | ▲DEW has the same orientation as ▲DEW [N36], ▲DEW ≅ ▲EDW [92] =(r53 Properties of similar triangles (Reverse))> ∠(DE,DW) = ∠(EW,DE) [93]
+094. | ∠(DF,DN) = ∠(FN,DF) [79], ∠(DF,DW) = ∠(FW,DF) [83] =(AR Deduction)> ∠(DN,DW) = ∠(FW,FN) [94]
+095. | DN = AN [C11], FN = AN [C7], FW = DW [80] =(AR Deduction)> DN:DW = FN:FW [95]
+096. | ∠(DN,DW) = ∠(FW,FN) [94], DN:DW = FN:FW [95], ▲DNW has the same orientation as ▲FWN [N37] =(r63 SAS Similarity of triangles (Reverse))> ▲DNW ≅ ▲FNW [96]
+097. | ▲DNW has the same orientation as ▲FWN [N37], ▲DNW ≅ ▲FNW [96] =(r53 Properties of similar triangles (Reverse))> ∠(DW,NW) = ∠(NW,FW) [97]
+098. | ∠(EF,EO) = ∠(FO,EF) [44], AF ∥ AP [45], AF ∥ EF [48], AP ∥ HX [C13], HX ⟂ OX [C14] =(AR Deduction)> ∠(EO,OX) = ∠(OX,FO) [98]
+099. | EO = BO [31], FO = BO [38] =(AR Deduction)> EO:FO = OX:OX [99]
+100. | ∠(EO,OX) = ∠(OX,FO) [98], EO:FO = OX:OX [99], ▲EOX has the same orientation as ▲FXO [N38] =(r63 SAS Similarity of triangles (Reverse))> ▲EOX ≅ ▲FOX [100]
+101. | ▲EOX has the same orientation as ▲FXO [N38], ▲EOX ≅ ▲FOX [100] =(r53 Properties of similar triangles (Reverse))> ∠(EO,EX) = ∠(FX,FO) [101]
+102. | AM = CM [C0], AM = EM [C2] =(AR Deduction)> CM:EM = EM:CM [102]
+103. | ∠(CM,EM) = ∠(CM,EM) [T18], CM:EM = EM:CM [102], ▲CEM has the same orientation as ▲CEM [N39] =(r63 SAS Similarity of triangles (Reverse))> ▲CEM ≅ ▲ECM [103]
+104. | ▲CEM has the same orientation as ▲CEM [N39], ▲CEM ≅ ▲ECM [103] =(r53 Properties of similar triangles (Reverse))> ∠(CE,CM) = ∠(EM,CE) [104]
+105. | A, E, P are collinear [C3], A, E are all distinct [N5], A, P are all distinct [N6], E, P are all distinct [N7] =(r82 Parallel from collinear)> EP ∥ AE [105]
+106. | ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AE,AM) = ∠(EM,AE) [9], AP ∥ AE [14], EP ∥ AE [105] =(AR Deduction)> ∠(CM,CP) = ∠(EM,EP) [106]
+107. | ∠(CM,CP) = ∠(EM,EP) [106], C, M, P are not collinear [N40] =(r04 Congruent angles are in a cyclic)> CEMP are cyclic [107]
+108. | CEMP are cyclic [107] =(r03 Arc determines internal angles)> ∠(CE,CP) = ∠(EM,MP) [108]
+109. | EO = BO [31], FO = BO [38], FW = EW [84] =(AR Deduction)> EO:EW = FO:FW [109]
+110. | FW = EW [84] =(AR Deduction)> EW:FW = OW:OW [110]
+111. | EO:EW = FO:FW [109], EW:FW = OW:OW [110], ▲EOW has the same orientation as ▲FWO [N41] =(r61 SSS Similarity of triangles (Reverse))> ▲EOW ≅ ▲FOW [111]
+112. | ▲EOW has the same orientation as ▲FWO [N41], ▲EOW ≅ ▲FOW [111] =(r53 Properties of similar triangles (Reverse))> ∠(EO,OW) = ∠(OW,FO) [112]
+113. | ∠(EF,EO) = ∠(FO,EF) [44], ∠(EO,OW) = ∠(OW,FO) [112], AF ∥ AP [45], AF ∥ EF [48], AP ∥ HX [C13], HX ⟂ OX [C14] =(AR Deduction)> OX ∥ OW [113]
+114. | OX ∥ OW [113] =(r28 Overlapping parallels)> O, W, X are collinear [114]
+115. | O, W, X are collinear [114], O, W are all distinct [N42], O, X are all distinct [N43], W, X are all distinct [N44] =(r82 Parallel from collinear)> WX ∥ OW [115]
+116. | HM ⟂ NP [C15], HP ⟂ MN [C16] =(r43 Orthocenter theorem)> HN ⟂ MP [116]
+117. | ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AD,AN) = ∠(DN,AD) [73], ∠(AD,AP) = ∠(DP,AD) [76], ∠(AE,AM) = ∠(EM,AE) [9], ∠(AF,AN) = ∠(FN,AF) [30], ∠(CD,CP) = ∠(DP,CD) [13], ∠(CE,CM) = ∠(EM,CE) [104], ∠(CE,CP) = ∠(EM,MP) [108], ∠(DF,DN) = ∠(FN,DF) [79], ∠(DF,DW) = ∠(FW,DF) [83], ∠(DW,NW) = ∠(NW,FW) [97], ∠(EF,EO) = ∠(FO,EF) [44], ∠(EO,OW) = ∠(OW,FO) [112], AF ∥ EF [48], AP ∥ AE [14], AP ∥ HX [C13], CD ∥ CM [20], CM ∥ MN [15], DN ∥ MN [17], WX ∥ OW [115], HN ⟂ MP [116] =(AR Deduction)> ∠(HN,HX) = ∠(NW,WX) [117]
+118. | ∠(HN,HX) = ∠(NW,WX) [117], H, N, X are not collinear [N45] =(r04 Congruent angles are in a cyclic)> HNWX are cyclic [118]
+119. | HNWX are cyclic [118] =(r03 Arc determines internal angles)> ∠(HW,HX) = ∠(NW,NX) [119]
+120. | A, F, P are collinear [C9], A, F are all distinct [N21], A, P are all distinct [N6], F, P are all distinct [N22] =(r82 Parallel from collinear)> FP ∥ AP [120]
+121. | ∠(AD,AN) = ∠(DN,AD) [73], ∠(AD,AP) = ∠(DP,AD) [76], ∠(AF,AN) = ∠(FN,AF) [30], AF ∥ AP [45], FP ∥ AP [120] =(AR Deduction)> ∠(DN,DP) = ∠(FN,FP) [121]
+122. | ∠(DN,DP) = ∠(FN,FP) [121], D, N, P are not collinear [N46] =(r04 Congruent angles are in a cyclic)> DFNP are cyclic [122]
+123. | DFNP are cyclic [122] =(r03 Arc determines internal angles)> ∠(DF,DP) = ∠(FN,NP) [123]
+124. | ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AE,AM) = ∠(EM,AE) [9], ∠(CD,CP) = ∠(DP,CD) [13], ∠(DE,DW) = ∠(EM,MW) [90], ∠(DE,DW) = ∠(EW,DE) [93], ∠(DF,DN) = ∠(FN,DF) [79], ∠(DF,DP) = ∠(FN,NP) [123], ∠(DF,DW) = ∠(FW,DF) [83], ∠(EF,EW) = ∠(FW,EF) [87], AF ∥ AP [45], AF ∥ EF [48], AP ∥ AE [14], CD ∥ CM [20], CM ∥ MN [15], DN ∥ MN [17], HM ⟂ NP [C15] =(AR Deduction)> HM ∥ MW [124]
+125. | HM ∥ MW [124] =(r28 Overlapping parallels)> H, M, W are collinear [125]
+126. | H, M, W are collinear [125], H, M are all distinct [N47], H, W are all distinct [N48], M, W are all distinct [N49] =(r82 Parallel from collinear)> HW ∥ MW [126]
+127. | ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AD,AN) = ∠(DN,AD) [73], ∠(AD,AP) = ∠(DP,AD) [76], ∠(AE,AM) = ∠(EM,AE) [9], ∠(AF,AN) = ∠(FN,AF) [30], ∠(CD,CP) = ∠(DP,CD) [13], ∠(DE,DW) = ∠(EM,MW) [90], ∠(DE,DW) = ∠(EW,DE) [93], ∠(DW,NW) = ∠(NW,FW) [97], ∠(EF,EW) = ∠(FW,EF) [87], ∠(HW,HX) = ∠(NW,NX) [119], AF ∥ AP [45], AF ∥ EF [48], AP ∥ AE [14], AP ∥ HX [C13], CD ∥ CM [20], CM ∥ MN [15], DN ∥ MN [17], HW ∥ MW [126] =(AR Deduction)> FN ∥ NX [127]
+128. | FN ∥ NX [127] =(r28 Overlapping parallels)> F, N, X are collinear [128]
+129. | F, N, X are collinear [128], F, N are all distinct [N50], F, X are all distinct [N51], N, X are all distinct [N52] =(r82 Parallel from collinear)> FX ∥ NX [129]
+130. | ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AE,AM) = ∠(EM,AE) [9], ∠(CD,CP) = ∠(DP,CD) [13], ∠(DE,DW) = ∠(EM,MW) [90], ∠(DE,DW) = ∠(EW,DE) [93], ∠(DW,NW) = ∠(NW,FW) [97], ∠(EF,EO) = ∠(FO,EF) [44], ∠(EF,EW) = ∠(FW,EF) [87], ∠(EO,EX) = ∠(FX,FO) [101], ∠(HW,HX) = ∠(NW,NX) [119], AP ∥ AE [14], AP ∥ HX [C13], CD ∥ CM [20], FX ∥ NX [129], HW ∥ MW [126] =(AR Deduction)> ∠(CP,DP) = ∠(FX,EX) [130]
+131. | ▲EOX has the same orientation as ▲FXO [N38], ▲EOX ≅ ▲FOX [100] =(r53 Properties of similar triangles (Reverse))> EO:EX = FO:FX [131]
+132. | AP = CP [3], DP = AP [10], EO = BO [31], FO = BO [38], EO:EX = FO:FX [131] =(AR Deduction)> CP:DP = EX:FX [132]
+133. | ∠(CP,DP) = ∠(FX,EX) [130], CP:DP = EX:FX [132], ▲CDP has the same orientation as ▲EXF [N29] =(r63 SAS Similarity of triangles (Reverse))> ▲CDP ≅ ▲EFX [133]
+134. | ▲CDP has the same orientation as ▲EXF [N29], ▲CDP ≅ ▲EFX [133] =(r53 Properties of similar triangles (Reverse))> CD:CP = EF:EX [134]
+135. | ∠(AB,AM) = ∠(BM,AB) [59], ∠(AE,AM) = ∠(EM,AE) [9], ∠(BE,BM) = ∠(EM,BE) [52], ∠(BE,BO) = ∠(EO,BE) [34], ∠(BF,BO) = ∠(FO,BF) [41], ∠(EF,EO) = ∠(FO,EF) [44], AF ∥ AP [45], AF ∥ EF [48], AP ∥ AE [14] =(AR Deduction)> ∠(AB,BF) = ∠(BM,BO) [135]
+136. | AM = BM [C10], AB:AM = BF:BO [56] =(AR Deduction)> AB:BF = BM:BO [136]
+137. | ∠(AB,BF) = ∠(BM,BO) [135], AB:BF = BM:BO [136], ▲ABF has the same orientation as ▲BOM [N54] =(r62 SAS Similarity of triangles (Direct))> ▲ABF ≅ ▲MBO [137]
+138. | ▲ABF has the same orientation as ▲BOM [N54], ▲ABF ≅ ▲MBO [137] =(r52 Properties of similar triangles (Direct))> ∠(AF,BF) = ∠(MO,BO) [138]
+139. | AM = BM [C10], AN = BN [C6] =(AR Deduction)> AM:AN = BM:BN [139]
+140. | AM = BM [C10] =(AR Deduction)> AM:BM = MN:MN [140]
+141. | AM:AN = BM:BN [139], AM:BM = MN:MN [140], ▲AMN has the same orientation as ▲BNM [N55] =(r61 SSS Similarity of triangles (Reverse))> ▲AMN ≅ ▲BMN [141]
+142. | ▲AMN has the same orientation as ▲BNM [N55], ▲AMN ≅ ▲BMN [141] =(r53 Properties of similar triangles (Reverse))> ∠(AM,MN) = ∠(MN,BM) [142]
+143. | ∠(AB,AM) = ∠(BM,AB) [59], ∠(AB,AN) = ∠(BN,AB) [27], ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AD,AN) = ∠(DN,AD) [73], ∠(AD,AP) = ∠(DP,AD) [76], ∠(AE,AM) = ∠(EM,AE) [9], ∠(AF,AN) = ∠(FN,AF) [30], ∠(AF,BF) = ∠(MO,BO) [138], ∠(AM,MN) = ∠(MN,BM) [142], ∠(BF,BN) = ∠(FN,BF) [37], ∠(BF,BO) = ∠(FO,BF) [41], ∠(CD,CP) = ∠(DP,CD) [13], ∠(DE,DW) = ∠(EM,MW) [90], ∠(DE,DW) = ∠(EW,DE) [93], ∠(DW,NW) = ∠(NW,FW) [97], ∠(EF,EW) = ∠(FW,EF) [87], ∠(EO,EX) = ∠(FX,FO) [101], ∠(HW,HX) = ∠(NW,NX) [119], AF ∥ AP [45], AF ∥ EF [48], AP ∥ AE [14], AP ∥ HX [C13], CD ∥ CM [20], CM ∥ MN [15], DN ∥ MN [17], FX ∥ NX [129], HW ∥ MW [126] =(AR Deduction)> ∠(EO,EX) = ∠(MO,MN) [143]
+144. | ▲ABF has the same orientation as ▲BOM [N54], ▲ABF ≅ ▲MBO [137] =(r52 Properties of similar triangles (Direct))> AB:AF = BM:MO [144]
+145. | ∠(AB,AM) = ∠(BM,AB) [59], ∠(AB,AN) = ∠(BN,AB) [27], ∠(AC,AM) = ∠(CM,AC) [2], ∠(AC,AP) = ∠(CP,AC) [6], ∠(AD,AN) = ∠(DN,AD) [73], ∠(AD,AP) = ∠(DP,AD) [76], ∠(AE,AM) = ∠(EM,AE) [9], ∠(AF,AN) = ∠(FN,AF) [30], ∠(BE,BM) = ∠(EM,BE) [52], ∠(BF,BN) = ∠(FN,BF) [37], ∠(CD,CP) = ∠(DP,CD) [13], AF ∥ AP [45], AP ∥ AE [14], CD ∥ CM [20], CM ∥ MN [15], DN ∥ MN [17] =(AR Deduction)> ∠(AB,BE) = ∠(BF,AB) [145]
+146. | A, E, F are collinear [47], ∠(AB,BE) = ∠(BF,AB) [145], B, E, F are not collinear [N56] =(r12 Bisector theorem II)> AE:AF = BE:BF [146]
+147. | AM = BM [C10], EO = BO [31], AB:AF = BM:MO [144], AB:AM = BF:BO [56], AE:AF = BE:BF [146], AE:AM = CD:CP [24], AM:BE = MN:EF [70], CD:CP = EF:EX [134] =(AR Deduction)> EO:EX = MO:MN [147]
+148. | ∠(EO,EX) = ∠(MO,MN) [143], EO:EX = MO:MN [147], ▲EOX has the same orientation as ▲MON [N53] =(r62 SAS Similarity of triangles (Direct))> ▲EOX ≅ ▲MON [148]
+149. | ▲EOX has the same orientation as ▲MON [N53], ▲EOX ≅ ▲MON [148] =(r52 Properties of similar triangles (Direct))> EX:MN = OX:NO [149]
+150. | AE:AM = CD:CP [24], AE:BE = NO:BO [66], AM:BE = MN:EF [70], CD:CP = EF:EX [134], EX:MN = OX:NO [149] =(AR Deduction)> OX = BO [150]
+
+
+# Appendix: AR deductions:
+
+
+
+000. | Ratio Chasing to prove AM:CM = CM:AM:
+| Premise AM = CM gives a linear equation with coefficients {AM²: 1, CM²: -1}
+We are left with a linear equation with coefficients {AM²: 2, CM²: -2} that gives AM:CM = CM:AM
+
+
+
+004. | Ratio Chasing to prove AP:CP = CP:AP:
+| Premise AP = CP gives a linear equation with coefficients {AP²: 1, CP²: -1}
+We are left with a linear equation with coefficients {AP²: 2, CP²: -2} that gives AP:CP = CP:AP
+
+
+
+007. | Ratio Chasing to prove AM:EM = EM:AM:
+| Premise AM = EM gives a linear equation with coefficients {AM²: 1, EM²: -1}
+We are left with a linear equation with coefficients {AM²: 2, EM²: -2} that gives AM:EM = EM:AM
+
+
+
+011. | Ratio Chasing to prove CP:DP = DP:CP:
+| Premise AP = CP gives a linear equation with coefficients {AP²: 1, CP²: -1}
+| Premise DP = AP gives a linear equation with coefficients {AP²: 1, DP²: -1}
+| Then {AP²: -2, CP²: 2} + 2 x {AP²: 1, DP²: -1}
+|    = {CP²: 2, DP²: -2}
+We are left with a linear equation with coefficients {CP²: 2, DP²: -2} that gives CP:DP = DP:CP
+
+
+
+018. | Angle Chasing to prove CM ∥ DM:
+| Premise CM ∥ MN gives a linear equation with coefficients {CM: 1, MN: -1}
+| Premise DN ∥ DM gives a linear equation with coefficients {DM: 1, DN: -1}
+| Then {CM: 1, MN: -1} + -1 x {DM: 1, DN: -1}
+|    = {CM: 1, MN: -1, DM: -1, DN: 1}
+| Premise DN ∥ MN gives a linear equation with coefficients {DN: 1, MN: -1}
+| Then {CM: 1, MN: -1, DM: -1, DN: 1} + -1 x {DN: 1, MN: -1}
+|    = {CM: 1, DM: -1}
+We are left with a linear equation with coefficients {CM: 1, DM: -1} that gives CM ∥ DM
+
+
+
+021. | Angle Chasing to prove ∠(AM,EM) = ∠(CP,DP):
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AC: 4, AM: -2, CM: -2} + 2 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: -2, CM: -2, AP: 2, CP: 2}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: -2, CM: -2, AP: 2, CP: 2} + 1 x {AE: -2, AM: 1, EM: 1}
+|    = {AM: -1, CM: -2, AP: 2, CP: 2, AE: -2, EM: 1}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {AM: -1, CM: -2, AP: 2, CP: 2, AE: -2, EM: 1} + -1 x {CD: -2, CP: 1, DP: 1}
+|    = {AM: -1, CM: -2, AP: 2, CP: 1, AE: -2, EM: 1, CD: 2, DP: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {AM: -1, CM: -2, AP: 2, CP: 1, AE: -2, EM: 1, CD: 2, DP: -1} + 2 x {AE: 1, AP: -1}
+|    = {AM: -1, CM: -2, CP: 1, EM: 1, CD: 2, DP: -1}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {AM: -1, CM: -2, CP: 1, EM: 1, CD: 2, DP: -1} + -2 x {CD: 1, CM: -1}
+|    = {AM: -1, CP: 1, EM: 1, DP: -1}
+We are left with a linear equation with coefficients {AM: -1, CP: 1, EM: 1, DP: -1} that gives ∠(AM,EM) = ∠(CP,DP)
+
+
+
+022. | Ratio Chasing to prove AM:CP = EM:DP:
+| Premise AM = EM gives a linear equation with coefficients {AM²: 1, EM²: -1}
+| Premise AP = CP gives a linear equation with coefficients {AP²: 1, CP²: -1}
+| Then {AM²: 1, EM²: -1} + 1 x {AP²: 1, CP²: -1}
+|    = {AM²: 1, EM²: -1, AP²: 1, CP²: -1}
+| Premise DP = AP gives a linear equation with coefficients {AP²: 1, DP²: -1}
+| Then {AM²: 1, EM²: -1, AP²: 1, CP²: -1} + -1 x {AP²: 1, DP²: -1}
+|    = {AM²: 1, EM²: -1, CP²: -1, DP²: 1}
+We are left with a linear equation with coefficients {AM²: 1, EM²: -1, CP²: -1, DP²: 1} that gives AM:CP = EM:DP
+
+
+
+025. | Ratio Chasing to prove AN:BN = BN:AN:
+| Premise AN = BN gives a linear equation with coefficients {AN²: 1, BN²: -1}
+We are left with a linear equation with coefficients {AN²: 2, BN²: -2} that gives AN:BN = BN:AN
+
+
+
+028. | Ratio Chasing to prove AN:FN = FN:AN:
+| Premise FN = AN gives a linear equation with coefficients {AN²: 1, FN²: -1}
+We are left with a linear equation with coefficients {AN²: 2, FN²: -2} that gives AN:FN = FN:AN
+
+
+
+032. | Ratio Chasing to prove BO:EO = EO:BO:
+| Premise EO = BO gives a linear equation with coefficients {BO²: 1, EO²: -1}
+We are left with a linear equation with coefficients {BO²: 2, EO²: -2} that gives BO:EO = EO:BO
+
+
+
+035. | Ratio Chasing to prove BN:FN = FN:BN:
+| Premise AN = BN gives a linear equation with coefficients {AN²: 1, BN²: -1}
+| Premise FN = AN gives a linear equation with coefficients {AN²: 1, FN²: -1}
+| Then {AN²: -2, BN²: 2} + 2 x {AN²: 1, FN²: -1}
+|    = {BN²: 2, FN²: -2}
+We are left with a linear equation with coefficients {BN²: 2, FN²: -2} that gives BN:FN = FN:BN
+
+
+
+039. | Ratio Chasing to prove BO:FO = FO:BO:
+| Premise FO = BO gives a linear equation with coefficients {BO²: 1, FO²: -1}
+We are left with a linear equation with coefficients {BO²: 2, FO²: -2} that gives BO:FO = FO:BO
+
+
+
+042. | Ratio Chasing to prove EO:FO = FO:EO:
+| Premise EO = BO gives a linear equation with coefficients {BO²: 1, EO²: -1}
+| Premise FO = BO gives a linear equation with coefficients {BO²: 1, FO²: -1}
+| Then {BO²: -2, EO²: 2} + 2 x {BO²: 1, FO²: -1}
+|    = {EO²: 2, FO²: -2}
+We are left with a linear equation with coefficients {EO²: 2, FO²: -2} that gives EO:FO = FO:EO
+
+
+
+046. | Angle Chasing to prove AF ∥ AE:
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {AF: -1, AP: 1} + 1 x {AE: 1, AP: -1}
+|    = {AF: -1, AE: 1}
+We are left with a linear equation with coefficients {AF: -1, AE: 1} that gives AF ∥ AE
+
+
+
+049. | Angle Chasing to prove ∠(AB,BE) = ∠(BN,BO):
+| Premise ∠(AB,AN) = ∠(BN,AB) gives a linear equation with coefficients {AB: -2, AN: 1, BN: 1}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {AB: -1, AN: 1/2, BN: 1/2} + -1/2 x {AF: -2, AN: 1, FN: 1}
+|    = {AB: -1, BN: 1/2, AF: 1, FN: -1/2}
+| Premise ∠(BE,BO) = ∠(EO,BE) gives a linear equation with coefficients {BE: -2, BO: 1, EO: 1}
+| Then {AB: -1, BN: 1/2, AF: 1, FN: -1/2} + -1/2 x {BE: -2, BO: 1, EO: 1}
+|    = {AB: -1, BN: 1/2, AF: 1, FN: -1/2, BE: 1, BO: -1/2, EO: -1/2}
+| Premise ∠(BF,BN) = ∠(FN,BF) gives a linear equation with coefficients {BF: -2, BN: 1, FN: 1}
+| Then {AB: -1, BN: 1/2, AF: 1, FN: -1/2, BE: 1, BO: -1/2, EO: -1/2} + 1/2 x {BF: -2, BN: 1, FN: 1}
+|    = {AB: -1, BN: 1, AF: 1, BE: 1, BO: -1/2, EO: -1/2, BF: -1}
+| Premise ∠(BF,BO) = ∠(FO,BF) gives a linear equation with coefficients {BF: -2, BO: 1, FO: 1}
+| Then {AB: -1, BN: 1, AF: 1, BE: 1, BO: -1/2, EO: -1/2, BF: -1} + -1/2 x {BF: -2, BO: 1, FO: 1}
+|    = {AB: -1, BN: 1, AF: 1, BE: 1, BO: -1, EO: -1/2, FO: -1/2}
+| Premise ∠(EF,EO) = ∠(FO,EF) gives a linear equation with coefficients {EF: -2, EO: 1, FO: 1}
+| Then {AB: -1, BN: 1, AF: 1, BE: 1, BO: -1, EO: -1/2, FO: -1/2} + 1/2 x {EF: -2, EO: 1, FO: 1}
+|    = {AB: -1, BN: 1, AF: 1, BE: 1, BO: -1, EF: -1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {AB: -1, BN: 1, AF: 1, BE: 1, BO: -1, EF: -1} + -1 x {AF: 1, EF: -1}
+|    = {AB: -1, BN: 1, BE: 1, BO: -1}
+We are left with a linear equation with coefficients {AB: -1, BN: 1, BE: 1, BO: -1} that gives ∠(AB,BE) = ∠(BN,BO)
+
+
+
+050. | Ratio Chasing to prove BM:EM = EM:BM:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise AM = EM gives a linear equation with coefficients {AM²: 1, EM²: -1}
+| Then {AM²: -2, BM²: 2} + 2 x {AM²: 1, EM²: -1}
+|    = {BM²: 2, EM²: -2}
+We are left with a linear equation with coefficients {BM²: 2, EM²: -2} that gives BM:EM = EM:BM
+
+
+
+053. | Angle Chasing to prove ∠(AM,BM) = ∠(FO,BO):
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Premise ∠(BE,BM) = ∠(EM,BE) gives a linear equation with coefficients {BE: -2, BM: 1, EM: 1}
+| Then {AE: 2, AM: -1, EM: -1} + 1 x {BE: -2, BM: 1, EM: 1}
+|    = {AE: 2, AM: -1, BE: -2, BM: 1}
+| Premise ∠(BE,BO) = ∠(EO,BE) gives a linear equation with coefficients {BE: -2, BO: 1, EO: 1}
+| Then {AE: 2, AM: -1, BE: -2, BM: 1} + -1 x {BE: -2, BO: 1, EO: 1}
+|    = {AE: 2, AM: -1, BM: 1, BO: -1, EO: -1}
+| Premise ∠(EF,EO) = ∠(FO,EF) gives a linear equation with coefficients {EF: -2, EO: 1, FO: 1}
+| Then {AE: 2, AM: -1, BM: 1, BO: -1, EO: -1} + 1 x {EF: -2, EO: 1, FO: 1}
+|    = {AE: 2, AM: -1, BM: 1, BO: -1, EF: -2, FO: 1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {AE: 2, AM: -1, BM: 1, BO: -1, EF: -2, FO: 1} + 2 x {AF: 1, AP: -1}
+|    = {AE: 2, AM: -1, BM: 1, BO: -1, EF: -2, FO: 1, AF: 2, AP: -2}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {AE: 2, AM: -1, BM: 1, BO: -1, EF: -2, FO: 1, AF: 2, AP: -2} + -2 x {AF: 1, EF: -1}
+|    = {AE: 2, AM: -1, BM: 1, BO: -1, FO: 1, AP: -2}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {AE: 2, AM: -1, BM: 1, BO: -1, FO: 1, AP: -2} + -2 x {AE: 1, AP: -1}
+|    = {AM: -1, BM: 1, BO: -1, FO: 1}
+We are left with a linear equation with coefficients {AM: -1, BM: 1, BO: -1, FO: 1} that gives ∠(AM,BM) = ∠(FO,BO)
+
+
+
+054. | Ratio Chasing to prove AM:BM = BO:FO:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise FO = BO gives a linear equation with coefficients {BO²: 1, FO²: -1}
+| Then {AM²: 1, BM²: -1} + -1 x {BO²: 1, FO²: -1}
+|    = {AM²: 1, BM²: -1, BO²: -1, FO²: 1}
+We are left with a linear equation with coefficients {AM²: 1, BM²: -1, BO²: -1, FO²: 1} that gives AM:BM = BO:FO
+
+
+
+057. | Ratio Chasing to prove AM:BM = BM:AM:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+We are left with a linear equation with coefficients {AM²: 2, BM²: -2} that gives AM:BM = BM:AM
+
+
+
+060. | Angle Chasing to prove ∠(BM,EM) = ∠(BN,FN):
+| Premise ∠(AB,AM) = ∠(BM,AB) gives a linear equation with coefficients {AB: -2, AM: 1, BM: 1}
+| Premise ∠(AB,AN) = ∠(BN,AB) gives a linear equation with coefficients {AB: -2, AN: 1, BN: 1}
+| Then {AB: 2, AM: -1, BM: -1} + 1 x {AB: -2, AN: 1, BN: 1}
+|    = {AM: -1, BM: -1, AN: 1, BN: 1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: -1, BM: -1, AN: 1, BN: 1} + 1 x {AE: -2, AM: 1, EM: 1}
+|    = {BM: -1, AN: 1, BN: 1, AE: -2, EM: 1}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {BM: -1, AN: 1, BN: 1, AE: -2, EM: 1} + -1 x {AF: -2, AN: 1, FN: 1}
+|    = {BM: -1, BN: 1, AE: -2, EM: 1, AF: 2, FN: -1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {BM: -1, BN: 1, AE: -2, EM: 1, AF: 2, FN: -1} + -2 x {AF: 1, AP: -1}
+|    = {BM: -1, BN: 1, AE: -2, EM: 1, FN: -1, AP: 2}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {BM: -1, BN: 1, AE: -2, EM: 1, FN: -1, AP: 2} + 2 x {AE: 1, AP: -1}
+|    = {BM: -1, BN: 1, EM: 1, FN: -1}
+We are left with a linear equation with coefficients {BM: -1, BN: 1, EM: 1, FN: -1} that gives ∠(BM,EM) = ∠(BN,FN)
+
+
+
+061. | Ratio Chasing to prove BM:EM = FN:BN:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise AM = EM gives a linear equation with coefficients {AM²: 1, EM²: -1}
+| Then {AM²: -1, BM²: 1} + 1 x {AM²: 1, EM²: -1}
+|    = {BM²: 1, EM²: -1}
+| Premise AN = BN gives a linear equation with coefficients {AN²: 1, BN²: -1}
+| Then {BM²: 1, EM²: -1} + -1 x {AN²: 1, BN²: -1}
+|    = {BM²: 1, EM²: -1, AN²: -1, BN²: 1}
+| Premise FN = AN gives a linear equation with coefficients {AN²: 1, FN²: -1}
+| Then {BM²: 1, EM²: -1, AN²: -1, BN²: 1} + 1 x {AN²: 1, FN²: -1}
+|    = {BM²: 1, EM²: -1, BN²: 1, FN²: -1}
+We are left with a linear equation with coefficients {BM²: 1, EM²: -1, BN²: 1, FN²: -1} that gives BM:EM = FN:BN
+
+
+
+064. | Ratio Chasing to prove AB:BE = BN:BO:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise AN = BN gives a linear equation with coefficients {AN²: 1, BN²: -1}
+| Then {AM²: 1, BM²: -1} + 1 x {AN²: 1, BN²: -1}
+|    = {AM²: 1, BM²: -1, AN²: 1, BN²: -1}
+| Premise FN = AN gives a linear equation with coefficients {AN²: 1, FN²: -1}
+| Then {AM²: 1, BM²: -1, AN²: 1, BN²: -1} + -1 x {AN²: 1, FN²: -1}
+|    = {AM²: 1, BM²: -1, BN²: -1, FN²: 1}
+| Premise AB:AM = BF:BO gives a linear equation with coefficients {AB²: 1, AM²: -1, BF²: -1, BO²: 1}
+| Then {AM²: 1, BM²: -1, BN²: -1, FN²: 1} + 1 x {AB²: 1, AM²: -1, BF²: -1, BO²: 1}
+|    = {BM²: -1, BN²: -1, FN²: 1, AB²: 1, BF²: -1, BO²: 1}
+| Premise BE:BF = BM:FN gives a linear equation with coefficients {BE²: 1, BF²: -1, BM²: -1, FN²: 1}
+| Then {BM²: -1, BN²: -1, FN²: 1, AB²: 1, BF²: -1, BO²: 1} + -1 x {BE²: 1, BF²: -1, BM²: -1, FN²: 1}
+|    = {BN²: -1, AB²: 1, BO²: 1, BE²: -1}
+We are left with a linear equation with coefficients {BN²: -1, AB²: 1, BO²: 1, BE²: -1} that gives AB:BE = BN:BO
+
+
+
+067. | Angle Chasing to prove ∠(AM,AN) = ∠(BF,BE):
+| Premise ∠(AB,AM) = ∠(BM,AB) gives a linear equation with coefficients {AB: -2, AM: 1, BM: 1}
+| Premise ∠(AB,AN) = ∠(BN,AB) gives a linear equation with coefficients {AB: -2, AN: 1, BN: 1}
+| Then {AB: 1, AM: -1/2, BM: -1/2} + 1/2 x {AB: -2, AN: 1, BN: 1}
+|    = {AM: -1/2, BM: -1/2, AN: 1/2, BN: 1/2}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: -1/2, BM: -1/2, AN: 1/2, BN: 1/2} + -1/2 x {AE: -2, AM: 1, EM: 1}
+|    = {AM: -1, BM: -1/2, AN: 1/2, BN: 1/2, AE: 1, EM: -1/2}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {AM: -1, BM: -1/2, AN: 1/2, BN: 1/2, AE: 1, EM: -1/2} + 1/2 x {AF: -2, AN: 1, FN: 1}
+|    = {AM: -1, BM: -1/2, AN: 1, BN: 1/2, AE: 1, EM: -1/2, AF: -1, FN: 1/2}
+| Premise ∠(BE,BM) = ∠(EM,BE) gives a linear equation with coefficients {BE: -2, BM: 1, EM: 1}
+| Then {AM: -1, BM: -1/2, AN: 1, BN: 1/2, AE: 1, EM: -1/2, AF: -1, FN: 1/2} + 1/2 x {BE: -2, BM: 1, EM: 1}
+|    = {AM: -1, AN: 1, BN: 1/2, AE: 1, AF: -1, FN: 1/2, BE: -1}
+| Premise ∠(BF,BN) = ∠(FN,BF) gives a linear equation with coefficients {BF: -2, BN: 1, FN: 1}
+| Then {AM: -1, AN: 1, BN: 1/2, AE: 1, AF: -1, FN: 1/2, BE: -1} + -1/2 x {BF: -2, BN: 1, FN: 1}
+|    = {AM: -1, AN: 1, AE: 1, AF: -1, BE: -1, BF: 1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {AM: -1, AN: 1, AE: 1, AF: -1, BE: -1, BF: 1} + 1 x {AF: 1, AP: -1}
+|    = {AM: -1, AN: 1, AE: 1, BE: -1, BF: 1, AP: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {AM: -1, AN: 1, AE: 1, BE: -1, BF: 1, AP: -1} + -1 x {AE: 1, AP: -1}
+|    = {AM: -1, AN: 1, BE: -1, BF: 1}
+We are left with a linear equation with coefficients {AM: -1, AN: 1, BE: -1, BF: 1} that gives ∠(AM,AN) = ∠(BF,BE)
+
+
+
+068. | Ratio Chasing to prove AM:AN = BE:BF:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise FN = AN gives a linear equation with coefficients {AN²: 1, FN²: -1}
+| Then {AM²: 1, BM²: -1} + -1 x {AN²: 1, FN²: -1}
+|    = {AM²: 1, BM²: -1, AN²: -1, FN²: 1}
+| Premise BE:BF = BM:FN gives a linear equation with coefficients {BE²: 1, BF²: -1, BM²: -1, FN²: 1}
+| Then {AM²: 1, BM²: -1, AN²: -1, FN²: 1} + -1 x {BE²: 1, BF²: -1, BM²: -1, FN²: 1}
+|    = {AM²: 1, AN²: -1, BE²: -1, BF²: 1}
+We are left with a linear equation with coefficients {AM²: 1, AN²: -1, BE²: -1, BF²: 1} that gives AM:AN = BE:BF
+
+
+
+071. | Ratio Chasing to prove AN:DN = DN:AN:
+| Premise DN = AN gives a linear equation with coefficients {AN²: 1, DN²: -1}
+We are left with a linear equation with coefficients {AN²: 2, DN²: -2} that gives AN:DN = DN:AN
+
+
+
+074. | Ratio Chasing to prove AP:DP = DP:AP:
+| Premise DP = AP gives a linear equation with coefficients {AP²: 1, DP²: -1}
+We are left with a linear equation with coefficients {AP²: 2, DP²: -2} that gives AP:DP = DP:AP
+
+
+
+077. | Ratio Chasing to prove DN:FN = FN:DN:
+| Premise DN = AN gives a linear equation with coefficients {AN²: 1, DN²: -1}
+| Premise FN = AN gives a linear equation with coefficients {AN²: 1, FN²: -1}
+| Then {AN²: -2, DN²: 2} + 2 x {AN²: 1, FN²: -1}
+|    = {DN²: 2, FN²: -2}
+We are left with a linear equation with coefficients {DN²: 2, FN²: -2} that gives DN:FN = FN:DN
+
+
+
+081. | Ratio Chasing to prove DW:FW = FW:DW:
+| Premise FW = DW gives a linear equation with coefficients {DW²: 1, FW²: -1}
+We are left with a linear equation with coefficients {DW²: 2, FW²: -2} that gives DW:FW = FW:DW
+
+
+
+085. | Ratio Chasing to prove EW:FW = FW:EW:
+| Premise FW = EW gives a linear equation with coefficients {EW²: 1, FW²: -1}
+We are left with a linear equation with coefficients {EW²: 2, FW²: -2} that gives EW:FW = FW:EW
+
+
+
+088. | Angle Chasing to prove ∠(DM,DW) = ∠(EM,EW):
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AC: 2, AM: -1, CM: -1} + 1 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: -1, CM: -1, AP: 1, CP: 1}
+| Premise ∠(AD,AN) = ∠(DN,AD) gives a linear equation with coefficients {AD: -2, AN: 1, DN: 1}
+| Then {AM: -1, CM: -1, AP: 1, CP: 1} + -1 x {AD: -2, AN: 1, DN: 1}
+|    = {AM: -1, CM: -1, AP: 1, CP: 1, AD: 2, AN: -1, DN: -1}
+| Premise ∠(AD,AP) = ∠(DP,AD) gives a linear equation with coefficients {AD: -2, AP: 1, DP: 1}
+| Then {AM: -1, CM: -1, AP: 1, CP: 1, AD: 2, AN: -1, DN: -1} + 1 x {AD: -2, AP: 1, DP: 1}
+|    = {AM: -1, CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: -1, CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1} + 1 x {AE: -2, AM: 1, EM: 1}
+|    = {CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1, AE: -2, EM: 1}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1, AE: -2, EM: 1} + 1 x {AF: -2, AN: 1, FN: 1}
+|    = {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1} + -1 x {CD: -2, CP: 1, DP: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, EM: 1, AF: -2, FN: 1, CD: 2}
+| Premise ∠(DF,DN) = ∠(FN,DF) gives a linear equation with coefficients {DF: -2, DN: 1, FN: 1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, EM: 1, AF: -2, FN: 1, CD: 2} + -1 x {DF: -2, DN: 1, FN: 1}
+|    = {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, AF: -2, CD: 2, DF: 2}
+| Premise ∠(DF,DW) = ∠(FW,DF) gives a linear equation with coefficients {DF: -2, DW: 1, FW: 1}
+| Then {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, AF: -2, CD: 2, DF: 2} + 1 x {DF: -2, DW: 1, FW: 1}
+|    = {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, AF: -2, CD: 2, DW: 1, FW: 1}
+| Premise ∠(EF,EW) = ∠(FW,EF) gives a linear equation with coefficients {EF: -2, EW: 1, FW: 1}
+| Then {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, AF: -2, CD: 2, DW: 1, FW: 1} + -1 x {EF: -2, EW: 1, FW: 1}
+|    = {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, AF: -2, CD: 2, DW: 1, EF: 2, EW: -1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, AF: -2, CD: 2, DW: 1, EF: 2, EW: -1} + 2 x {AF: 1, EF: -1}
+|    = {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, CD: 2, DW: 1, EW: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {CM: -1, AP: 2, DN: -2, AE: -2, EM: 1, CD: 2, DW: 1, EW: -1} + 2 x {AE: 1, AP: -1}
+|    = {CM: -1, DN: -2, EM: 1, CD: 2, DW: 1, EW: -1}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {CM: -1, DN: -2, EM: 1, CD: 2, DW: 1, EW: -1} + -2 x {CD: 1, CM: -1}
+|    = {CM: 1, DN: -2, EM: 1, DW: 1, EW: -1}
+| Premise CM ∥ MN gives a linear equation with coefficients {CM: 1, MN: -1}
+| Then {CM: 1, DN: -2, EM: 1, DW: 1, EW: -1} + -1 x {CM: 1, MN: -1}
+|    = {DN: -2, EM: 1, DW: 1, EW: -1, MN: 1}
+| Premise DN ∥ DM gives a linear equation with coefficients {DM: 1, DN: -1}
+| Then {DN: -2, EM: 1, DW: 1, EW: -1, MN: 1} + -1 x {DM: 1, DN: -1}
+|    = {DN: -1, EM: 1, DW: 1, EW: -1, MN: 1, DM: -1}
+| Premise DN ∥ MN gives a linear equation with coefficients {DN: 1, MN: -1}
+| Then {DN: -1, EM: 1, DW: 1, EW: -1, MN: 1, DM: -1} + 1 x {DN: 1, MN: -1}
+|    = {EM: 1, DW: 1, EW: -1, DM: -1}
+We are left with a linear equation with coefficients {EM: 1, DW: 1, EW: -1, DM: -1} that gives ∠(DM,DW) = ∠(EM,EW)
+
+
+
+091. | Ratio Chasing to prove DW:EW = EW:DW:
+| Premise FW = DW gives a linear equation with coefficients {DW²: 1, FW²: -1}
+| Premise FW = EW gives a linear equation with coefficients {EW²: 1, FW²: -1}
+| Then {DW²: 2, FW²: -2} + -2 x {EW²: 1, FW²: -1}
+|    = {DW²: 2, EW²: -2}
+We are left with a linear equation with coefficients {DW²: 2, EW²: -2} that gives DW:EW = EW:DW
+
+
+
+094. | Angle Chasing to prove ∠(DN,DW) = ∠(FW,FN):
+| Premise ∠(DF,DN) = ∠(FN,DF) gives a linear equation with coefficients {DF: -2, DN: 1, FN: 1}
+| Premise ∠(DF,DW) = ∠(FW,DF) gives a linear equation with coefficients {DF: -2, DW: 1, FW: 1}
+| Then {DF: 2, DN: -1, FN: -1} + 1 x {DF: -2, DW: 1, FW: 1}
+|    = {DN: -1, FN: -1, DW: 1, FW: 1}
+We are left with a linear equation with coefficients {DN: -1, FN: -1, DW: 1, FW: 1} that gives ∠(DN,DW) = ∠(FW,FN)
+
+
+
+095. | Ratio Chasing to prove DN:DW = FN:FW:
+| Premise DN = AN gives a linear equation with coefficients {AN²: 1, DN²: -1}
+| Premise FN = AN gives a linear equation with coefficients {AN²: 1, FN²: -1}
+| Then {AN²: -1, DN²: 1} + 1 x {AN²: 1, FN²: -1}
+|    = {DN²: 1, FN²: -1}
+| Premise FW = DW gives a linear equation with coefficients {DW²: 1, FW²: -1}
+| Then {DN²: 1, FN²: -1} + -1 x {DW²: 1, FW²: -1}
+|    = {DN²: 1, FN²: -1, DW²: -1, FW²: 1}
+We are left with a linear equation with coefficients {DN²: 1, FN²: -1, DW²: -1, FW²: 1} that gives DN:DW = FN:FW
+
+
+
+098. | Angle Chasing to prove ∠(EO,OX) = ∠(OX,FO):
+| Premise ∠(EF,EO) = ∠(FO,EF) gives a linear equation with coefficients {EF: -2, EO: 1, FO: 1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {EF: 2, EO: -1, FO: -1} + -2 x {AF: 1, AP: -1}
+|    = {EF: 2, EO: -1, FO: -1, AF: -2, AP: 2}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {EF: 2, EO: -1, FO: -1, AF: -2, AP: 2} + 2 x {AF: 1, EF: -1}
+|    = {EO: -1, FO: -1, AP: 2}
+| Premise AP ∥ HX gives a linear equation with coefficients {AP: 1, HX: -1}
+| Then {EO: -1, FO: -1, AP: 2} + -2 x {AP: 1, HX: -1}
+|    = {EO: -1, FO: -1, HX: 2}
+| Premise HX ⟂ OX gives a linear equation with coefficients {HX: 1, OX: -1}
+| Then {EO: -1, FO: -1, HX: 2} + -2 x {HX: 1, OX: -1}
+|    = {EO: -1, FO: -1, OX: 2}
+We are left with a linear equation with coefficients {EO: -1, FO: -1, OX: 2} that gives ∠(EO,OX) = ∠(OX,FO)
+
+
+
+099. | Ratio Chasing to prove EO:FO = OX:OX:
+| Premise EO = BO gives a linear equation with coefficients {BO²: 1, EO²: -1}
+| Premise FO = BO gives a linear equation with coefficients {BO²: 1, FO²: -1}
+| Then {BO²: -1, EO²: 1} + 1 x {BO²: 1, FO²: -1}
+|    = {EO²: 1, FO²: -1}
+We are left with a linear equation with coefficients {EO²: 1, FO²: -1} that gives EO:FO = OX:OX
+
+
+
+102. | Ratio Chasing to prove CM:EM = EM:CM:
+| Premise AM = CM gives a linear equation with coefficients {AM²: 1, CM²: -1}
+| Premise AM = EM gives a linear equation with coefficients {AM²: 1, EM²: -1}
+| Then {AM²: -2, CM²: 2} + 2 x {AM²: 1, EM²: -1}
+|    = {CM²: 2, EM²: -2}
+We are left with a linear equation with coefficients {CM²: 2, EM²: -2} that gives CM:EM = EM:CM
+
+
+
+106. | Angle Chasing to prove ∠(CM,CP) = ∠(EM,EP):
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AC: 2, AM: -1, CM: -1} + 1 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: -1, CM: -1, AP: 1, CP: 1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: -1, CM: -1, AP: 1, CP: 1} + 1 x {AE: -2, AM: 1, EM: 1}
+|    = {CM: -1, AP: 1, CP: 1, AE: -2, EM: 1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {CM: -1, AP: 1, CP: 1, AE: -2, EM: 1} + 1 x {AE: 1, AP: -1}
+|    = {CM: -1, CP: 1, AE: -1, EM: 1}
+| Premise EP ∥ AE gives a linear equation with coefficients {AE: 1, EP: -1}
+| Then {CM: -1, CP: 1, AE: -1, EM: 1} + 1 x {AE: 1, EP: -1}
+|    = {CM: -1, CP: 1, EM: 1, EP: -1}
+We are left with a linear equation with coefficients {CM: -1, CP: 1, EM: 1, EP: -1} that gives ∠(CM,CP) = ∠(EM,EP)
+
+
+
+109. | Ratio Chasing to prove EO:EW = FO:FW:
+| Premise EO = BO gives a linear equation with coefficients {BO²: 1, EO²: -1}
+| Premise FO = BO gives a linear equation with coefficients {BO²: 1, FO²: -1}
+| Then {BO²: -1, EO²: 1} + 1 x {BO²: 1, FO²: -1}
+|    = {EO²: 1, FO²: -1}
+| Premise FW = EW gives a linear equation with coefficients {EW²: 1, FW²: -1}
+| Then {EO²: 1, FO²: -1} + -1 x {EW²: 1, FW²: -1}
+|    = {EO²: 1, FO²: -1, EW²: -1, FW²: 1}
+We are left with a linear equation with coefficients {EO²: 1, FO²: -1, EW²: -1, FW²: 1} that gives EO:EW = FO:FW
+
+
+
+110. | Ratio Chasing to prove EW:FW = OW:OW:
+| Premise FW = EW gives a linear equation with coefficients {EW²: 1, FW²: -1}
+We are left with a linear equation with coefficients {EW²: 1, FW²: -1} that gives EW:FW = OW:OW
+
+
+
+113. | Angle Chasing to prove OX ∥ OW:
+| Premise ∠(EF,EO) = ∠(FO,EF) gives a linear equation with coefficients {EF: -2, EO: 1, FO: 1}
+| Premise ∠(EO,OW) = ∠(OW,FO) gives a linear equation with coefficients {EO: -1, FO: -1, OW: 2}
+| Then {EF: -1, EO: 1/2, FO: 1/2} + 1/2 x {EO: -1, FO: -1, OW: 2}
+|    = {EF: -1, OW: 1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {EF: -1, OW: 1} + 1 x {AF: 1, AP: -1}
+|    = {EF: -1, OW: 1, AF: 1, AP: -1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {EF: -1, OW: 1, AF: 1, AP: -1} + -1 x {AF: 1, EF: -1}
+|    = {OW: 1, AP: -1}
+| Premise AP ∥ HX gives a linear equation with coefficients {AP: 1, HX: -1}
+| Then {OW: 1, AP: -1} + 1 x {AP: 1, HX: -1}
+|    = {OW: 1, HX: -1}
+| Premise HX ⟂ OX gives a linear equation with coefficients {HX: 1, OX: -1}
+| Then {OW: 1, HX: -1} + 1 x {HX: 1, OX: -1}
+|    = {OW: 1, OX: -1}
+We are left with a linear equation with coefficients {OW: 1, OX: -1} that gives OX ∥ OW
+
+
+
+117. | Angle Chasing to prove ∠(HN,HX) = ∠(NW,WX):
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AC: -1, AM: 1/2, CM: 1/2} + -1/2 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: 1/2, CM: 1/2, AP: -1/2, CP: -1/2}
+| Premise ∠(AD,AN) = ∠(DN,AD) gives a linear equation with coefficients {AD: -2, AN: 1, DN: 1}
+| Then {AM: 1/2, CM: 1/2, AP: -1/2, CP: -1/2} + -1/2 x {AD: -2, AN: 1, DN: 1}
+|    = {AM: 1/2, CM: 1/2, AP: -1/2, CP: -1/2, AD: 1, AN: -1/2, DN: -1/2}
+| Premise ∠(AD,AP) = ∠(DP,AD) gives a linear equation with coefficients {AD: -2, AP: 1, DP: 1}
+| Then {AM: 1/2, CM: 1/2, AP: -1/2, CP: -1/2, AD: 1, AN: -1/2, DN: -1/2} + 1/2 x {AD: -2, AP: 1, DP: 1}
+|    = {AM: 1/2, CM: 1/2, CP: -1/2, AN: -1/2, DN: -1/2, DP: 1/2}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: 1/2, CM: 1/2, CP: -1/2, AN: -1/2, DN: -1/2, DP: 1/2} + -1/2 x {AE: -2, AM: 1, EM: 1}
+|    = {CM: 1/2, CP: -1/2, AN: -1/2, DN: -1/2, DP: 1/2, AE: 1, EM: -1/2}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {CM: 1/2, CP: -1/2, AN: -1/2, DN: -1/2, DP: 1/2, AE: 1, EM: -1/2} + 1/2 x {AF: -2, AN: 1, FN: 1}
+|    = {CM: 1/2, CP: -1/2, DN: -1/2, DP: 1/2, AE: 1, EM: -1/2, AF: -1, FN: 1/2}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {CM: 1/2, CP: -1/2, DN: -1/2, DP: 1/2, AE: 1, EM: -1/2, AF: -1, FN: 1/2} + -1/2 x {CD: -2, CP: 1, DP: 1}
+|    = {CM: 1/2, CP: -1, DN: -1/2, AE: 1, EM: -1/2, AF: -1, FN: 1/2, CD: 1}
+| Premise ∠(CE,CM) = ∠(EM,CE) gives a linear equation with coefficients {CE: -2, CM: 1, EM: 1}
+| Then {CM: 1/2, CP: -1, DN: -1/2, AE: 1, EM: -1/2, AF: -1, FN: 1/2, CD: 1} + -1/2 x {CE: -2, CM: 1, EM: 1}
+|    = {CP: -1, DN: -1/2, AE: 1, EM: -1, AF: -1, FN: 1/2, CD: 1, CE: 1}
+| Premise ∠(CE,CP) = ∠(EM,MP) gives a linear equation with coefficients {CE: -1, CP: 1, EM: 1, MP: -1}
+| Then {CP: -1, DN: -1/2, AE: 1, EM: -1, AF: -1, FN: 1/2, CD: 1, CE: 1} + 1 x {CE: -1, CP: 1, EM: 1, MP: -1}
+|    = {DN: -1/2, AE: 1, AF: -1, FN: 1/2, CD: 1, MP: -1}
+| Premise ∠(DF,DN) = ∠(FN,DF) gives a linear equation with coefficients {DF: -2, DN: 1, FN: 1}
+| Then {DN: -1/2, AE: 1, AF: -1, FN: 1/2, CD: 1, MP: -1} + -1/2 x {DF: -2, DN: 1, FN: 1}
+|    = {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, DF: 1}
+| Premise ∠(DF,DW) = ∠(FW,DF) gives a linear equation with coefficients {DF: -2, DW: 1, FW: 1}
+| Then {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, DF: 1} + 1/2 x {DF: -2, DW: 1, FW: 1}
+|    = {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, DW: 1/2, FW: 1/2}
+| Premise ∠(DW,NW) = ∠(NW,FW) gives a linear equation with coefficients {DW: -1, FW: -1, NW: 2}
+| Then {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, DW: 1/2, FW: 1/2} + 1/2 x {DW: -1, FW: -1, NW: 2}
+|    = {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, NW: 1}
+| Premise ∠(EF,EO) = ∠(FO,EF) gives a linear equation with coefficients {EF: -2, EO: 1, FO: 1}
+| Then {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, NW: 1} + -1/2 x {EF: -2, EO: 1, FO: 1}
+|    = {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, NW: 1, EF: 1, EO: -1/2, FO: -1/2}
+| Premise ∠(EO,OW) = ∠(OW,FO) gives a linear equation with coefficients {EO: -1, FO: -1, OW: 2}
+| Then {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, NW: 1, EF: 1, EO: -1/2, FO: -1/2} + -1/2 x {EO: -1, FO: -1, OW: 2}
+|    = {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, NW: 1, EF: 1, OW: -1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {DN: -1, AE: 1, AF: -1, CD: 1, MP: -1, NW: 1, EF: 1, OW: -1} + 1 x {AF: 1, EF: -1}
+|    = {DN: -1, AE: 1, CD: 1, MP: -1, NW: 1, OW: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {DN: -1, AE: 1, CD: 1, MP: -1, NW: 1, OW: -1} + -1 x {AE: 1, AP: -1}
+|    = {AP: 1, DN: -1, CD: 1, MP: -1, NW: 1, OW: -1}
+| Premise AP ∥ HX gives a linear equation with coefficients {AP: 1, HX: -1}
+| Then {AP: 1, DN: -1, CD: 1, MP: -1, NW: 1, OW: -1} + -1 x {AP: 1, HX: -1}
+|    = {DN: -1, CD: 1, MP: -1, NW: 1, OW: -1, HX: 1}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {DN: -1, CD: 1, MP: -1, NW: 1, OW: -1, HX: 1} + -1 x {CD: 1, CM: -1}
+|    = {CM: 1, DN: -1, MP: -1, NW: 1, OW: -1, HX: 1}
+| Premise CM ∥ MN gives a linear equation with coefficients {CM: 1, MN: -1}
+| Then {CM: 1, DN: -1, MP: -1, NW: 1, OW: -1, HX: 1} + -1 x {CM: 1, MN: -1}
+|    = {DN: -1, MP: -1, NW: 1, OW: -1, HX: 1, MN: 1}
+| Premise DN ∥ MN gives a linear equation with coefficients {DN: 1, MN: -1}
+| Then {DN: -1, MP: -1, NW: 1, OW: -1, HX: 1, MN: 1} + 1 x {DN: 1, MN: -1}
+|    = {MP: -1, NW: 1, OW: -1, HX: 1}
+| Premise WX ∥ OW gives a linear equation with coefficients {OW: 1, WX: -1}
+| Then {MP: -1, NW: 1, OW: -1, HX: 1} + 1 x {OW: 1, WX: -1}
+|    = {MP: -1, NW: 1, HX: 1, WX: -1}
+| Premise HN ⟂ MP gives a linear equation with coefficients {HN: 1, MP: -1}
+| Then {MP: -1, NW: 1, HX: 1, WX: -1} + -1 x {HN: 1, MP: -1}
+|    = {NW: 1, HX: 1, WX: -1, HN: -1}
+We are left with a linear equation with coefficients {NW: 1, HX: 1, WX: -1, HN: -1} that gives ∠(HN,HX) = ∠(NW,WX)
+
+
+
+121. | Angle Chasing to prove ∠(DN,DP) = ∠(FN,FP):
+| Premise ∠(AD,AN) = ∠(DN,AD) gives a linear equation with coefficients {AD: -2, AN: 1, DN: 1}
+| Premise ∠(AD,AP) = ∠(DP,AD) gives a linear equation with coefficients {AD: -2, AP: 1, DP: 1}
+| Then {AD: 2, AN: -1, DN: -1} + 1 x {AD: -2, AP: 1, DP: 1}
+|    = {AN: -1, DN: -1, AP: 1, DP: 1}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {AN: -1, DN: -1, AP: 1, DP: 1} + 1 x {AF: -2, AN: 1, FN: 1}
+|    = {DN: -1, AP: 1, DP: 1, AF: -2, FN: 1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {DN: -1, AP: 1, DP: 1, AF: -2, FN: 1} + 2 x {AF: 1, AP: -1}
+|    = {DN: -1, AP: -1, DP: 1, FN: 1}
+| Premise FP ∥ AP gives a linear equation with coefficients {AP: 1, FP: -1}
+| Then {DN: -1, AP: -1, DP: 1, FN: 1} + 1 x {AP: 1, FP: -1}
+|    = {DN: -1, DP: 1, FN: 1, FP: -1}
+We are left with a linear equation with coefficients {DN: -1, DP: 1, FN: 1, FP: -1} that gives ∠(DN,DP) = ∠(FN,FP)
+
+
+
+124. | Angle Chasing to prove HM ∥ MW:
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AC: -2, AM: 1, CM: 1} + -1 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: 1, CM: 1, AP: -1, CP: -1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: 1, CM: 1, AP: -1, CP: -1} + -1 x {AE: -2, AM: 1, EM: 1}
+|    = {CM: 1, AP: -1, CP: -1, AE: 2, EM: -1}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {CM: 1, AP: -1, CP: -1, AE: 2, EM: -1} + 1 x {CD: -2, CP: 1, DP: 1}
+|    = {CM: 1, AP: -1, AE: 2, EM: -1, CD: -2, DP: 1}
+| Premise ∠(DE,DW) = ∠(EM,MW) gives a linear equation with coefficients {DE: -1, DW: 1, EM: 1, MW: -1}
+| Then {CM: 1, AP: -1, AE: 2, EM: -1, CD: -2, DP: 1} + 1 x {DE: -1, DW: 1, EM: 1, MW: -1}
+|    = {CM: 1, AP: -1, AE: 2, CD: -2, DP: 1, DE: -1, DW: 1, MW: -1}
+| Premise ∠(DE,DW) = ∠(EW,DE) gives a linear equation with coefficients {DE: -2, DW: 1, EW: 1}
+| Then {CM: 1, AP: -1, AE: 2, CD: -2, DP: 1, DE: -1, DW: 1, MW: -1} + -1/2 x {DE: -2, DW: 1, EW: 1}
+|    = {CM: 1, AP: -1, AE: 2, CD: -2, DP: 1, DW: 1/2, MW: -1, EW: -1/2}
+| Premise ∠(DF,DN) = ∠(FN,DF) gives a linear equation with coefficients {DF: -2, DN: 1, FN: 1}
+| Then {CM: 1, AP: -1, AE: 2, CD: -2, DP: 1, DW: 1/2, MW: -1, EW: -1/2} + 1 x {DF: -2, DN: 1, FN: 1}
+|    = {CM: 1, AP: -1, AE: 2, CD: -2, DP: 1, DW: 1/2, MW: -1, EW: -1/2, DF: -2, DN: 1, FN: 1}
+| Premise ∠(DF,DP) = ∠(FN,NP) gives a linear equation with coefficients {DF: -1, DP: 1, FN: 1, NP: -1}
+| Then {CM: 1, AP: -1, AE: 2, CD: -2, DP: 1, DW: 1/2, MW: -1, EW: -1/2, DF: -2, DN: 1, FN: 1} + -1 x {DF: -1, DP: 1, FN: 1, NP: -1}
+|    = {CM: 1, AP: -1, AE: 2, CD: -2, DW: 1/2, MW: -1, EW: -1/2, DF: -1, DN: 1, NP: 1}
+| Premise ∠(DF,DW) = ∠(FW,DF) gives a linear equation with coefficients {DF: -2, DW: 1, FW: 1}
+| Then {CM: 1, AP: -1, AE: 2, CD: -2, DW: 1/2, MW: -1, EW: -1/2, DF: -1, DN: 1, NP: 1} + -1/2 x {DF: -2, DW: 1, FW: 1}
+|    = {CM: 1, AP: -1, AE: 2, CD: -2, MW: -1, EW: -1/2, DN: 1, NP: 1, FW: -1/2}
+| Premise ∠(EF,EW) = ∠(FW,EF) gives a linear equation with coefficients {EF: -2, EW: 1, FW: 1}
+| Then {CM: 1, AP: -1, AE: 2, CD: -2, MW: -1, EW: -1/2, DN: 1, NP: 1, FW: -1/2} + 1/2 x {EF: -2, EW: 1, FW: 1}
+|    = {CM: 1, AP: -1, AE: 2, CD: -2, MW: -1, DN: 1, NP: 1, EF: -1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {CM: 1, AP: -1, AE: 2, CD: -2, MW: -1, DN: 1, NP: 1, EF: -1} + 1 x {AF: 1, AP: -1}
+|    = {CM: 1, AP: -2, AE: 2, CD: -2, MW: -1, DN: 1, NP: 1, EF: -1, AF: 1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {CM: 1, AP: -2, AE: 2, CD: -2, MW: -1, DN: 1, NP: 1, EF: -1, AF: 1} + -1 x {AF: 1, EF: -1}
+|    = {CM: 1, AP: -2, AE: 2, CD: -2, MW: -1, DN: 1, NP: 1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {CM: 1, AP: -2, AE: 2, CD: -2, MW: -1, DN: 1, NP: 1} + -2 x {AE: 1, AP: -1}
+|    = {CM: 1, CD: -2, MW: -1, DN: 1, NP: 1}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {CM: 1, CD: -2, MW: -1, DN: 1, NP: 1} + 2 x {CD: 1, CM: -1}
+|    = {CM: -1, MW: -1, DN: 1, NP: 1}
+| Premise CM ∥ MN gives a linear equation with coefficients {CM: 1, MN: -1}
+| Then {CM: -1, MW: -1, DN: 1, NP: 1} + 1 x {CM: 1, MN: -1}
+|    = {MW: -1, DN: 1, NP: 1, MN: -1}
+| Premise DN ∥ MN gives a linear equation with coefficients {DN: 1, MN: -1}
+| Then {MW: -1, DN: 1, NP: 1, MN: -1} + -1 x {DN: 1, MN: -1}
+|    = {MW: -1, NP: 1}
+| Premise HM ⟂ NP gives a linear equation with coefficients {HM: 1, NP: -1}
+| Then {MW: -1, NP: 1} + 1 x {HM: 1, NP: -1}
+|    = {MW: -1, HM: 1}
+We are left with a linear equation with coefficients {MW: -1, HM: 1} that gives HM ∥ MW
+
+
+
+127. | Angle Chasing to prove FN ∥ NX:
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AC: 2, AM: -1, CM: -1} + 1 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: -1, CM: -1, AP: 1, CP: 1}
+| Premise ∠(AD,AN) = ∠(DN,AD) gives a linear equation with coefficients {AD: -2, AN: 1, DN: 1}
+| Then {AM: -1, CM: -1, AP: 1, CP: 1} + -1 x {AD: -2, AN: 1, DN: 1}
+|    = {AM: -1, CM: -1, AP: 1, CP: 1, AD: 2, AN: -1, DN: -1}
+| Premise ∠(AD,AP) = ∠(DP,AD) gives a linear equation with coefficients {AD: -2, AP: 1, DP: 1}
+| Then {AM: -1, CM: -1, AP: 1, CP: 1, AD: 2, AN: -1, DN: -1} + 1 x {AD: -2, AP: 1, DP: 1}
+|    = {AM: -1, CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: -1, CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1} + 1 x {AE: -2, AM: 1, EM: 1}
+|    = {CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1, AE: -2, EM: 1}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {CM: -1, AP: 2, CP: 1, AN: -1, DN: -1, DP: 1, AE: -2, EM: 1} + 1 x {AF: -2, AN: 1, FN: 1}
+|    = {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1} + -1 x {CD: -2, CP: 1, DP: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, EM: 1, AF: -2, FN: 1, CD: 2}
+| Premise ∠(DE,DW) = ∠(EM,MW) gives a linear equation with coefficients {DE: -1, DW: 1, EM: 1, MW: -1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, EM: 1, AF: -2, FN: 1, CD: 2} + -1 x {DE: -1, DW: 1, EM: 1, MW: -1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, DE: 1, DW: -1, MW: 1}
+| Premise ∠(DE,DW) = ∠(EW,DE) gives a linear equation with coefficients {DE: -2, DW: 1, EW: 1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, DE: 1, DW: -1, MW: 1} + 1/2 x {DE: -2, DW: 1, EW: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, DW: -1/2, MW: 1, EW: 1/2}
+| Premise ∠(DW,NW) = ∠(NW,FW) gives a linear equation with coefficients {DW: -1, FW: -1, NW: 2}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, DW: -1/2, MW: 1, EW: 1/2} + -1/2 x {DW: -1, FW: -1, NW: 2}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, MW: 1, EW: 1/2, FW: 1/2, NW: -1}
+| Premise ∠(EF,EW) = ∠(FW,EF) gives a linear equation with coefficients {EF: -2, EW: 1, FW: 1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, MW: 1, EW: 1/2, FW: 1/2, NW: -1} + -1/2 x {EF: -2, EW: 1, FW: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, MW: 1, NW: -1, EF: 1}
+| Premise ∠(HW,HX) = ∠(NW,NX) gives a linear equation with coefficients {HW: -1, HX: 1, NW: 1, NX: -1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, MW: 1, NW: -1, EF: 1} + 1 x {HW: -1, HX: 1, NW: 1, NX: -1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, MW: 1, EF: 1, HW: -1, HX: 1, NX: -1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, FN: 1, CD: 2, MW: 1, EF: 1, HW: -1, HX: 1, NX: -1} + 1 x {AF: 1, AP: -1}
+|    = {CM: -1, AP: 1, DN: -1, AE: -2, AF: -1, FN: 1, CD: 2, MW: 1, EF: 1, HW: -1, HX: 1, NX: -1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {CM: -1, AP: 1, DN: -1, AE: -2, AF: -1, FN: 1, CD: 2, MW: 1, EF: 1, HW: -1, HX: 1, NX: -1} + 1 x {AF: 1, EF: -1}
+|    = {CM: -1, AP: 1, DN: -1, AE: -2, FN: 1, CD: 2, MW: 1, HW: -1, HX: 1, NX: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {CM: -1, AP: 1, DN: -1, AE: -2, FN: 1, CD: 2, MW: 1, HW: -1, HX: 1, NX: -1} + 2 x {AE: 1, AP: -1}
+|    = {CM: -1, AP: -1, DN: -1, FN: 1, CD: 2, MW: 1, HW: -1, HX: 1, NX: -1}
+| Premise AP ∥ HX gives a linear equation with coefficients {AP: 1, HX: -1}
+| Then {CM: -1, AP: -1, DN: -1, FN: 1, CD: 2, MW: 1, HW: -1, HX: 1, NX: -1} + 1 x {AP: 1, HX: -1}
+|    = {CM: -1, DN: -1, FN: 1, CD: 2, MW: 1, HW: -1, NX: -1}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {CM: -1, DN: -1, FN: 1, CD: 2, MW: 1, HW: -1, NX: -1} + -2 x {CD: 1, CM: -1}
+|    = {CM: 1, DN: -1, FN: 1, MW: 1, HW: -1, NX: -1}
+| Premise CM ∥ MN gives a linear equation with coefficients {CM: 1, MN: -1}
+| Then {CM: 1, DN: -1, FN: 1, MW: 1, HW: -1, NX: -1} + -1 x {CM: 1, MN: -1}
+|    = {DN: -1, FN: 1, MW: 1, HW: -1, NX: -1, MN: 1}
+| Premise DN ∥ MN gives a linear equation with coefficients {DN: 1, MN: -1}
+| Then {DN: -1, FN: 1, MW: 1, HW: -1, NX: -1, MN: 1} + 1 x {DN: 1, MN: -1}
+|    = {FN: 1, MW: 1, HW: -1, NX: -1}
+| Premise HW ∥ MW gives a linear equation with coefficients {HW: 1, MW: -1}
+| Then {FN: 1, MW: 1, HW: -1, NX: -1} + 1 x {HW: 1, MW: -1}
+|    = {FN: 1, NX: -1}
+We are left with a linear equation with coefficients {FN: 1, NX: -1} that gives FN ∥ NX
+
+
+
+130. | Angle Chasing to prove ∠(CP,DP) = ∠(FX,EX):
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AC: -4, AM: 2, CM: 2} + -2 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: 2, CM: 2, AP: -2, CP: -2}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: 2, CM: 2, AP: -2, CP: -2} + -2 x {AE: -2, AM: 1, EM: 1}
+|    = {CM: 2, AP: -2, CP: -2, AE: 4, EM: -2}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {CM: 2, AP: -2, CP: -2, AE: 4, EM: -2} + 1 x {CD: -2, CP: 1, DP: 1}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, EM: -2, CD: -2, DP: 1}
+| Premise ∠(DE,DW) = ∠(EM,MW) gives a linear equation with coefficients {DE: -1, DW: 1, EM: 1, MW: -1}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, EM: -2, CD: -2, DP: 1} + 2 x {DE: -1, DW: 1, EM: 1, MW: -1}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, DE: -2, DW: 2, MW: -2}
+| Premise ∠(DE,DW) = ∠(EW,DE) gives a linear equation with coefficients {DE: -2, DW: 1, EW: 1}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, DE: -2, DW: 2, MW: -2} + -1 x {DE: -2, DW: 1, EW: 1}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, DW: 1, MW: -2, EW: -1}
+| Premise ∠(DW,NW) = ∠(NW,FW) gives a linear equation with coefficients {DW: -1, FW: -1, NW: 2}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, DW: 1, MW: -2, EW: -1} + 1 x {DW: -1, FW: -1, NW: 2}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, EW: -1, FW: -1, NW: 2}
+| Premise ∠(EF,EO) = ∠(FO,EF) gives a linear equation with coefficients {EF: -2, EO: 1, FO: 1}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, EW: -1, FW: -1, NW: 2} + -1 x {EF: -2, EO: 1, FO: 1}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, EW: -1, FW: -1, NW: 2, EF: 2, EO: -1, FO: -1}
+| Premise ∠(EF,EW) = ∠(FW,EF) gives a linear equation with coefficients {EF: -2, EW: 1, FW: 1}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, EW: -1, FW: -1, NW: 2, EF: 2, EO: -1, FO: -1} + 1 x {EF: -2, EW: 1, FW: 1}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, NW: 2, EO: -1, FO: -1}
+| Premise ∠(EO,EX) = ∠(FX,FO) gives a linear equation with coefficients {EO: -1, EX: 1, FO: -1, FX: 1}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, NW: 2, EO: -1, FO: -1} + -1 x {EO: -1, EX: 1, FO: -1, FX: 1}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, NW: 2, EX: -1, FX: -1}
+| Premise ∠(HW,HX) = ∠(NW,NX) gives a linear equation with coefficients {HW: -1, HX: 1, NW: 1, NX: -1}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, NW: 2, EX: -1, FX: -1} + -2 x {HW: -1, HX: 1, NW: 1, NX: -1}
+|    = {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, HX: -2, NX: 2}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {CM: 2, AP: -2, CP: -1, AE: 4, CD: -2, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, HX: -2, NX: 2} + -4 x {AE: 1, AP: -1}
+|    = {CM: 2, AP: 2, CP: -1, CD: -2, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, HX: -2, NX: 2}
+| Premise AP ∥ HX gives a linear equation with coefficients {AP: 1, HX: -1}
+| Then {CM: 2, AP: 2, CP: -1, CD: -2, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, HX: -2, NX: 2} + -2 x {AP: 1, HX: -1}
+|    = {CM: 2, CP: -1, CD: -2, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, NX: 2}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {CM: 2, CP: -1, CD: -2, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, NX: 2} + 2 x {CD: 1, CM: -1}
+|    = {CP: -1, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, NX: 2}
+| Premise FX ∥ NX gives a linear equation with coefficients {FX: 1, NX: -1}
+| Then {CP: -1, DP: 1, MW: -2, EX: -1, FX: -1, HW: 2, NX: 2} + 2 x {FX: 1, NX: -1}
+|    = {CP: -1, DP: 1, MW: -2, EX: -1, FX: 1, HW: 2}
+| Premise HW ∥ MW gives a linear equation with coefficients {HW: 1, MW: -1}
+| Then {CP: -1, DP: 1, MW: -2, EX: -1, FX: 1, HW: 2} + -2 x {HW: 1, MW: -1}
+|    = {CP: -1, DP: 1, EX: -1, FX: 1}
+We are left with a linear equation with coefficients {CP: -1, DP: 1, EX: -1, FX: 1} that gives ∠(CP,DP) = ∠(FX,EX)
+
+
+
+132. | Ratio Chasing to prove CP:DP = EX:FX:
+| Premise AP = CP gives a linear equation with coefficients {AP²: 1, CP²: -1}
+| Premise DP = AP gives a linear equation with coefficients {AP²: 1, DP²: -1}
+| Then {AP²: -1, CP²: 1} + 1 x {AP²: 1, DP²: -1}
+|    = {CP²: 1, DP²: -1}
+| Premise EO = BO gives a linear equation with coefficients {BO²: 1, EO²: -1}
+| Then {CP²: 1, DP²: -1} + 1 x {BO²: 1, EO²: -1}
+|    = {CP²: 1, DP²: -1, BO²: 1, EO²: -1}
+| Premise FO = BO gives a linear equation with coefficients {BO²: 1, FO²: -1}
+| Then {CP²: 1, DP²: -1, BO²: 1, EO²: -1} + -1 x {BO²: 1, FO²: -1}
+|    = {CP²: 1, DP²: -1, EO²: -1, FO²: 1}
+| Premise EO:EX = FO:FX gives a linear equation with coefficients {EO²: 1, EX²: -1, FO²: -1, FX²: 1}
+| Then {CP²: 1, DP²: -1, EO²: -1, FO²: 1} + 1 x {EO²: 1, EX²: -1, FO²: -1, FX²: 1}
+|    = {CP²: 1, DP²: -1, EX²: -1, FX²: 1}
+We are left with a linear equation with coefficients {CP²: 1, DP²: -1, EX²: -1, FX²: 1} that gives CP:DP = EX:FX
+
+
+
+135. | Angle Chasing to prove ∠(AB,BF) = ∠(BM,BO):
+| Premise ∠(AB,AM) = ∠(BM,AB) gives a linear equation with coefficients {AB: -2, AM: 1, BM: 1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AB: -1, AM: 1/2, BM: 1/2} + -1/2 x {AE: -2, AM: 1, EM: 1}
+|    = {AB: -1, BM: 1/2, AE: 1, EM: -1/2}
+| Premise ∠(BE,BM) = ∠(EM,BE) gives a linear equation with coefficients {BE: -2, BM: 1, EM: 1}
+| Then {AB: -1, BM: 1/2, AE: 1, EM: -1/2} + 1/2 x {BE: -2, BM: 1, EM: 1}
+|    = {AB: -1, BM: 1, AE: 1, BE: -1}
+| Premise ∠(BE,BO) = ∠(EO,BE) gives a linear equation with coefficients {BE: -2, BO: 1, EO: 1}
+| Then {AB: -1, BM: 1, AE: 1, BE: -1} + -1/2 x {BE: -2, BO: 1, EO: 1}
+|    = {AB: -1, BM: 1, AE: 1, BO: -1/2, EO: -1/2}
+| Premise ∠(BF,BO) = ∠(FO,BF) gives a linear equation with coefficients {BF: -2, BO: 1, FO: 1}
+| Then {AB: -1, BM: 1, AE: 1, BO: -1/2, EO: -1/2} + -1/2 x {BF: -2, BO: 1, FO: 1}
+|    = {AB: -1, BM: 1, AE: 1, BO: -1, EO: -1/2, BF: 1, FO: -1/2}
+| Premise ∠(EF,EO) = ∠(FO,EF) gives a linear equation with coefficients {EF: -2, EO: 1, FO: 1}
+| Then {AB: -1, BM: 1, AE: 1, BO: -1, EO: -1/2, BF: 1, FO: -1/2} + 1/2 x {EF: -2, EO: 1, FO: 1}
+|    = {AB: -1, BM: 1, AE: 1, BO: -1, BF: 1, EF: -1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {AB: -1, BM: 1, AE: 1, BO: -1, BF: 1, EF: -1} + 1 x {AF: 1, AP: -1}
+|    = {AB: -1, BM: 1, AE: 1, BO: -1, BF: 1, EF: -1, AF: 1, AP: -1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {AB: -1, BM: 1, AE: 1, BO: -1, BF: 1, EF: -1, AF: 1, AP: -1} + -1 x {AF: 1, EF: -1}
+|    = {AB: -1, BM: 1, AE: 1, BO: -1, BF: 1, AP: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {AB: -1, BM: 1, AE: 1, BO: -1, BF: 1, AP: -1} + -1 x {AE: 1, AP: -1}
+|    = {AB: -1, BM: 1, BO: -1, BF: 1}
+We are left with a linear equation with coefficients {AB: -1, BM: 1, BO: -1, BF: 1} that gives ∠(AB,BF) = ∠(BM,BO)
+
+
+
+136. | Ratio Chasing to prove AB:BF = BM:BO:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise AB:AM = BF:BO gives a linear equation with coefficients {AB²: 1, AM²: -1, BF²: -1, BO²: 1}
+| Then {AM²: 1, BM²: -1} + 1 x {AB²: 1, AM²: -1, BF²: -1, BO²: 1}
+|    = {BM²: -1, AB²: 1, BF²: -1, BO²: 1}
+We are left with a linear equation with coefficients {BM²: -1, AB²: 1, BF²: -1, BO²: 1} that gives AB:BF = BM:BO
+
+
+
+139. | Ratio Chasing to prove AM:AN = BM:BN:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise AN = BN gives a linear equation with coefficients {AN²: 1, BN²: -1}
+| Then {AM²: 1, BM²: -1} + -1 x {AN²: 1, BN²: -1}
+|    = {AM²: 1, BM²: -1, AN²: -1, BN²: 1}
+We are left with a linear equation with coefficients {AM²: 1, BM²: -1, AN²: -1, BN²: 1} that gives AM:AN = BM:BN
+
+
+
+140. | Ratio Chasing to prove AM:BM = MN:MN:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+We are left with a linear equation with coefficients {AM²: 1, BM²: -1} that gives AM:BM = MN:MN
+
+
+
+143. | Angle Chasing to prove ∠(EO,EX) = ∠(MO,MN):
+| Premise ∠(AB,AM) = ∠(BM,AB) gives a linear equation with coefficients {AB: -2, AM: 1, BM: 1}
+| Premise ∠(AB,AN) = ∠(BN,AB) gives a linear equation with coefficients {AB: -2, AN: 1, BN: 1}
+| Then {AB: 1, AM: -1/2, BM: -1/2} + 1/2 x {AB: -2, AN: 1, BN: 1}
+|    = {AM: -1/2, BM: -1/2, AN: 1/2, BN: 1/2}
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Then {AM: -1/2, BM: -1/2, AN: 1/2, BN: 1/2} + -1 x {AC: -2, AM: 1, CM: 1}
+|    = {AM: -3/2, BM: -1/2, AN: 1/2, BN: 1/2, AC: 2, CM: -1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AM: -3/2, BM: -1/2, AN: 1/2, BN: 1/2, AC: 2, CM: -1} + 1 x {AC: -2, AP: 1, CP: 1}
+|    = {AM: -3/2, BM: -1/2, AN: 1/2, BN: 1/2, CM: -1, AP: 1, CP: 1}
+| Premise ∠(AD,AN) = ∠(DN,AD) gives a linear equation with coefficients {AD: -2, AN: 1, DN: 1}
+| Then {AM: -3/2, BM: -1/2, AN: 1/2, BN: 1/2, CM: -1, AP: 1, CP: 1} + -1 x {AD: -2, AN: 1, DN: 1}
+|    = {AM: -3/2, BM: -1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 1, CP: 1, AD: 2, DN: -1}
+| Premise ∠(AD,AP) = ∠(DP,AD) gives a linear equation with coefficients {AD: -2, AP: 1, DP: 1}
+| Then {AM: -3/2, BM: -1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 1, CP: 1, AD: 2, DN: -1} + 1 x {AD: -2, AP: 1, DP: 1}
+|    = {AM: -3/2, BM: -1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AM: -3/2, BM: -1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1} + 1 x {AE: -2, AM: 1, EM: 1}
+|    = {AM: -1/2, BM: -1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {AM: -1/2, BM: -1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1} + 1/2 x {AF: -2, AN: 1, FN: 1}
+|    = {AM: -1/2, BM: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -1, FN: 1/2}
+| Premise ∠(AF,BF) = ∠(MO,BO) gives a linear equation with coefficients {AF: -1, BF: 1, BO: -1, MO: 1}
+| Then {AM: -1/2, BM: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -1, FN: 1/2} + 1 x {AF: -1, BF: 1, BO: -1, MO: 1}
+|    = {AM: -1/2, BM: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1/2, BF: 1, BO: -1, MO: 1}
+| Premise ∠(AM,MN) = ∠(MN,BM) gives a linear equation with coefficients {AM: -1, BM: -1, MN: 2}
+| Then {AM: -1/2, BM: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1/2, BF: 1, BO: -1, MO: 1} + -1/2 x {AM: -1, BM: -1, MN: 2}
+|    = {BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1/2, BF: 1, BO: -1, MO: 1, MN: -1}
+| Premise ∠(BF,BN) = ∠(FN,BF) gives a linear equation with coefficients {BF: -2, BN: 1, FN: 1}
+| Then {BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, FN: 1/2, BF: 1, BO: -1, MO: 1, MN: -1} + -1/2 x {BF: -2, BN: 1, FN: 1}
+|    = {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, BF: 2, BO: -1, MO: 1, MN: -1}
+| Premise ∠(BF,BO) = ∠(FO,BF) gives a linear equation with coefficients {BF: -2, BO: 1, FO: 1}
+| Then {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, BF: 2, BO: -1, MO: 1, MN: -1} + 1 x {BF: -2, BO: 1, FO: 1}
+|    = {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, MO: 1, MN: -1, FO: 1}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -2, EM: 1, AF: -2, MO: 1, MN: -1, FO: 1} + -1 x {CD: -2, CP: 1, DP: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, EM: 1, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2}
+| Premise ∠(DE,DW) = ∠(EM,MW) gives a linear equation with coefficients {DE: -1, DW: 1, EM: 1, MW: -1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, EM: 1, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2} + -1 x {DE: -1, DW: 1, EM: 1, MW: -1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, DE: 1, DW: -1, MW: 1}
+| Premise ∠(DE,DW) = ∠(EW,DE) gives a linear equation with coefficients {DE: -2, DW: 1, EW: 1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, DE: 1, DW: -1, MW: 1} + 1/2 x {DE: -2, DW: 1, EW: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, DW: -1/2, MW: 1, EW: 1/2}
+| Premise ∠(DW,NW) = ∠(NW,FW) gives a linear equation with coefficients {DW: -1, FW: -1, NW: 2}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, DW: -1/2, MW: 1, EW: 1/2} + -1/2 x {DW: -1, FW: -1, NW: 2}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, MW: 1, EW: 1/2, FW: 1/2, NW: -1}
+| Premise ∠(EF,EW) = ∠(FW,EF) gives a linear equation with coefficients {EF: -2, EW: 1, FW: 1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, MW: 1, EW: 1/2, FW: 1/2, NW: -1} + -1/2 x {EF: -2, EW: 1, FW: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, MW: 1, NW: -1, EF: 1}
+| Premise ∠(EO,EX) = ∠(FX,FO) gives a linear equation with coefficients {EO: -1, EX: 1, FO: -1, FX: 1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, FO: 1, CD: 2, MW: 1, NW: -1, EF: 1} + 1 x {EO: -1, EX: 1, FO: -1, FX: 1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, CD: 2, MW: 1, NW: -1, EF: 1, EO: -1, EX: 1, FX: 1}
+| Premise ∠(HW,HX) = ∠(NW,NX) gives a linear equation with coefficients {HW: -1, HX: 1, NW: 1, NX: -1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, CD: 2, MW: 1, NW: -1, EF: 1, EO: -1, EX: 1, FX: 1} + 1 x {HW: -1, HX: 1, NW: 1, NX: -1}
+|    = {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, CD: 2, MW: 1, EF: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {CM: -1, AP: 2, DN: -1, AE: -2, AF: -2, MO: 1, MN: -1, CD: 2, MW: 1, EF: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1} + 1 x {AF: 1, AP: -1}
+|    = {CM: -1, AP: 1, DN: -1, AE: -2, AF: -1, MO: 1, MN: -1, CD: 2, MW: 1, EF: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1}
+| Premise AF ∥ EF gives a linear equation with coefficients {AF: 1, EF: -1}
+| Then {CM: -1, AP: 1, DN: -1, AE: -2, AF: -1, MO: 1, MN: -1, CD: 2, MW: 1, EF: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1} + 1 x {AF: 1, EF: -1}
+|    = {CM: -1, AP: 1, DN: -1, AE: -2, MO: 1, MN: -1, CD: 2, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {CM: -1, AP: 1, DN: -1, AE: -2, MO: 1, MN: -1, CD: 2, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1} + 2 x {AE: 1, AP: -1}
+|    = {CM: -1, AP: -1, DN: -1, MO: 1, MN: -1, CD: 2, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1}
+| Premise AP ∥ HX gives a linear equation with coefficients {AP: 1, HX: -1}
+| Then {CM: -1, AP: -1, DN: -1, MO: 1, MN: -1, CD: 2, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, HX: 1, NX: -1} + 1 x {AP: 1, HX: -1}
+|    = {CM: -1, DN: -1, MO: 1, MN: -1, CD: 2, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {CM: -1, DN: -1, MO: 1, MN: -1, CD: 2, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1} + -2 x {CD: 1, CM: -1}
+|    = {CM: 1, DN: -1, MO: 1, MN: -1, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1}
+| Premise CM ∥ MN gives a linear equation with coefficients {CM: 1, MN: -1}
+| Then {CM: 1, DN: -1, MO: 1, MN: -1, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1} + -1 x {CM: 1, MN: -1}
+|    = {DN: -1, MO: 1, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1}
+| Premise DN ∥ MN gives a linear equation with coefficients {DN: 1, MN: -1}
+| Then {DN: -1, MO: 1, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1} + 1 x {DN: 1, MN: -1}
+|    = {MO: 1, MN: -1, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1}
+| Premise FX ∥ NX gives a linear equation with coefficients {FX: 1, NX: -1}
+| Then {MO: 1, MN: -1, MW: 1, EO: -1, EX: 1, FX: 1, HW: -1, NX: -1} + -1 x {FX: 1, NX: -1}
+|    = {MO: 1, MN: -1, MW: 1, EO: -1, EX: 1, HW: -1}
+| Premise HW ∥ MW gives a linear equation with coefficients {HW: 1, MW: -1}
+| Then {MO: 1, MN: -1, MW: 1, EO: -1, EX: 1, HW: -1} + 1 x {HW: 1, MW: -1}
+|    = {MO: 1, MN: -1, EO: -1, EX: 1}
+We are left with a linear equation with coefficients {MO: 1, MN: -1, EO: -1, EX: 1} that gives ∠(EO,EX) = ∠(MO,MN)
+
+
+
+145. | Angle Chasing to prove ∠(AB,BE) = ∠(BF,AB):
+| Premise ∠(AB,AM) = ∠(BM,AB) gives a linear equation with coefficients {AB: -2, AM: 1, BM: 1}
+| Premise ∠(AB,AN) = ∠(BN,AB) gives a linear equation with coefficients {AB: -2, AN: 1, BN: 1}
+| Then {AB: -1, AM: 1/2, BM: 1/2} + 1/2 x {AB: -2, AN: 1, BN: 1}
+|    = {AB: -2, AM: 1/2, BM: 1/2, AN: 1/2, BN: 1/2}
+| Premise ∠(AC,AM) = ∠(CM,AC) gives a linear equation with coefficients {AC: -2, AM: 1, CM: 1}
+| Then {AB: -2, AM: 1/2, BM: 1/2, AN: 1/2, BN: 1/2} + -1 x {AC: -2, AM: 1, CM: 1}
+|    = {AB: -2, AM: -1/2, BM: 1/2, AN: 1/2, BN: 1/2, AC: 2, CM: -1}
+| Premise ∠(AC,AP) = ∠(CP,AC) gives a linear equation with coefficients {AC: -2, AP: 1, CP: 1}
+| Then {AB: -2, AM: -1/2, BM: 1/2, AN: 1/2, BN: 1/2, AC: 2, CM: -1} + 1 x {AC: -2, AP: 1, CP: 1}
+|    = {AB: -2, AM: -1/2, BM: 1/2, AN: 1/2, BN: 1/2, CM: -1, AP: 1, CP: 1}
+| Premise ∠(AD,AN) = ∠(DN,AD) gives a linear equation with coefficients {AD: -2, AN: 1, DN: 1}
+| Then {AB: -2, AM: -1/2, BM: 1/2, AN: 1/2, BN: 1/2, CM: -1, AP: 1, CP: 1} + -1 x {AD: -2, AN: 1, DN: 1}
+|    = {AB: -2, AM: -1/2, BM: 1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 1, CP: 1, AD: 2, DN: -1}
+| Premise ∠(AD,AP) = ∠(DP,AD) gives a linear equation with coefficients {AD: -2, AP: 1, DP: 1}
+| Then {AB: -2, AM: -1/2, BM: 1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 1, CP: 1, AD: 2, DN: -1} + 1 x {AD: -2, AP: 1, DP: 1}
+|    = {AB: -2, AM: -1/2, BM: 1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1}
+| Premise ∠(AE,AM) = ∠(EM,AE) gives a linear equation with coefficients {AE: -2, AM: 1, EM: 1}
+| Then {AB: -2, AM: -1/2, BM: 1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1} + 1/2 x {AE: -2, AM: 1, EM: 1}
+|    = {AB: -2, BM: 1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, EM: 1/2}
+| Premise ∠(AF,AN) = ∠(FN,AF) gives a linear equation with coefficients {AF: -2, AN: 1, FN: 1}
+| Then {AB: -2, BM: 1/2, AN: -1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, EM: 1/2} + 1/2 x {AF: -2, AN: 1, FN: 1}
+|    = {AB: -2, BM: 1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, EM: 1/2, AF: -1, FN: 1/2}
+| Premise ∠(BE,BM) = ∠(EM,BE) gives a linear equation with coefficients {BE: -2, BM: 1, EM: 1}
+| Then {AB: -2, BM: 1/2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, EM: 1/2, AF: -1, FN: 1/2} + -1/2 x {BE: -2, BM: 1, EM: 1}
+|    = {AB: -2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, AF: -1, FN: 1/2, BE: 1}
+| Premise ∠(BF,BN) = ∠(FN,BF) gives a linear equation with coefficients {BF: -2, BN: 1, FN: 1}
+| Then {AB: -2, BN: 1/2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, AF: -1, FN: 1/2, BE: 1} + -1/2 x {BF: -2, BN: 1, FN: 1}
+|    = {AB: -2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, AF: -1, BE: 1, BF: 1}
+| Premise ∠(CD,CP) = ∠(DP,CD) gives a linear equation with coefficients {CD: -2, CP: 1, DP: 1}
+| Then {AB: -2, CM: -1, AP: 2, CP: 1, DN: -1, DP: 1, AE: -1, AF: -1, BE: 1, BF: 1} + -1 x {CD: -2, CP: 1, DP: 1}
+|    = {AB: -2, CM: -1, AP: 2, DN: -1, AE: -1, AF: -1, BE: 1, BF: 1, CD: 2}
+| Premise AF ∥ AP gives a linear equation with coefficients {AF: 1, AP: -1}
+| Then {AB: -2, CM: -1, AP: 2, DN: -1, AE: -1, AF: -1, BE: 1, BF: 1, CD: 2} + 1 x {AF: 1, AP: -1}
+|    = {AB: -2, CM: -1, AP: 1, DN: -1, AE: -1, BE: 1, BF: 1, CD: 2}
+| Premise AP ∥ AE gives a linear equation with coefficients {AE: 1, AP: -1}
+| Then {AB: -2, CM: -1, AP: 1, DN: -1, AE: -1, BE: 1, BF: 1, CD: 2} + 1 x {AE: 1, AP: -1}
+|    = {AB: -2, CM: -1, DN: -1, BE: 1, BF: 1, CD: 2}
+| Premise CD ∥ CM gives a linear equation with coefficients {CD: 1, CM: -1}
+| Then {AB: -2, CM: -1, DN: -1, BE: 1, BF: 1, CD: 2} + -2 x {CD: 1, CM: -1}
+|    = {AB: -2, CM: 1, DN: -1, BE: 1, BF: 1}
+| Premise CM ∥ MN gives a linear equation with coefficients {CM: 1, MN: -1}
+| Then {AB: -2, CM: 1, DN: -1, BE: 1, BF: 1} + -1 x {CM: 1, MN: -1}
+|    = {AB: -2, DN: -1, BE: 1, BF: 1, MN: 1}
+| Premise DN ∥ MN gives a linear equation with coefficients {DN: 1, MN: -1}
+| Then {AB: -2, DN: -1, BE: 1, BF: 1, MN: 1} + 1 x {DN: 1, MN: -1}
+|    = {AB: -2, BE: 1, BF: 1}
+We are left with a linear equation with coefficients {AB: -2, BE: 1, BF: 1} that gives ∠(AB,BE) = ∠(BF,AB)
+
+
+
+147. | Ratio Chasing to prove EO:EX = MO:MN:
+| Premise AM = BM gives a linear equation with coefficients {AM²: 1, BM²: -1}
+| Premise EO = BO gives a linear equation with coefficients {BO²: 1, EO²: -1}
+| Then {AM²: 1, BM²: -1} + -1 x {BO²: 1, EO²: -1}
+|    = {AM²: 1, BM²: -1, BO²: -1, EO²: 1}
+| Premise AB:AF = BM:MO gives a linear equation with coefficients {AB²: 1, AF²: -1, BM²: -1, MO²: 1}
+| Then {AM²: 1, BM²: -1, BO²: -1, EO²: 1} + -1 x {AB²: 1, AF²: -1, BM²: -1, MO²: 1}
+|    = {AM²: 1, BO²: -1, EO²: 1, AB²: -1, AF²: 1, MO²: -1}
+| Premise AB:AM = BF:BO gives a linear equation with coefficients {AB²: 1, AM²: -1, BF²: -1, BO²: 1}
+| Then {AM²: 1, BO²: -1, EO²: 1, AB²: -1, AF²: 1, MO²: -1} + 1 x {AB²: 1, AM²: -1, BF²: -1, BO²: 1}
+|    = {EO²: 1, AF²: 1, MO²: -1, BF²: -1}
+| Premise AE:AF = BE:BF gives a linear equation with coefficients {AE²: 1, AF²: -1, BE²: -1, BF²: 1}
+| Then {EO²: 1, AF²: 1, MO²: -1, BF²: -1} + 1 x {AE²: 1, AF²: -1, BE²: -1, BF²: 1}
+|    = {EO²: 1, MO²: -1, AE²: 1, BE²: -1}
+| Premise AE:AM = CD:CP gives a linear equation with coefficients {AE²: 1, AM²: -1, CD²: -1, CP²: 1}
+| Then {EO²: 1, MO²: -1, AE²: 1, BE²: -1} + -1 x {AE²: 1, AM²: -1, CD²: -1, CP²: 1}
+|    = {AM²: 1, EO²: 1, MO²: -1, BE²: -1, CD²: 1, CP²: -1}
+| Premise AM:BE = MN:EF gives a linear equation with coefficients {AM²: 1, BE²: -1, EF²: 1, MN²: -1}
+| Then {AM²: 1, EO²: 1, MO²: -1, BE²: -1, CD²: 1, CP²: -1} + -1 x {AM²: 1, BE²: -1, EF²: 1, MN²: -1}
+|    = {EO²: 1, MO²: -1, CD²: 1, CP²: -1, EF²: -1, MN²: 1}
+| Premise CD:CP = EF:EX gives a linear equation with coefficients {CD²: 1, CP²: -1, EF²: -1, EX²: 1}
+| Then {EO²: 1, MO²: -1, CD²: 1, CP²: -1, EF²: -1, MN²: 1} + -1 x {CD²: 1, CP²: -1, EF²: -1, EX²: 1}
+|    = {EO²: 1, MO²: -1, MN²: 1, EX²: -1}
+We are left with a linear equation with coefficients {EO²: 1, MO²: -1, MN²: 1, EX²: -1} that gives EO:EX = MO:MN
+
+
+
+150. | Ratio Chasing to prove OX = BO:
+| Premise AE:AM = CD:CP gives a linear equation with coefficients {AE²: 1, AM²: -1, CD²: -1, CP²: 1}
+| Premise AE:BE = NO:BO gives a linear equation with coefficients {AE²: 1, BE²: -1, BO²: 1, NO²: -1}
+| Then {AE²: -1, AM²: 1, CD²: 1, CP²: -1} + 1 x {AE²: 1, BE²: -1, BO²: 1, NO²: -1}
+|    = {AM²: 1, CD²: 1, CP²: -1, BE²: -1, BO²: 1, NO²: -1}
+| Premise AM:BE = MN:EF gives a linear equation with coefficients {AM²: 1, BE²: -1, EF²: 1, MN²: -1}
+| Then {AM²: 1, CD²: 1, CP²: -1, BE²: -1, BO²: 1, NO²: -1} + -1 x {AM²: 1, BE²: -1, EF²: 1, MN²: -1}
+|    = {CD²: 1, CP²: -1, BO²: 1, NO²: -1, EF²: -1, MN²: 1}
+| Premise CD:CP = EF:EX gives a linear equation with coefficients {CD²: 1, CP²: -1, EF²: -1, EX²: 1}
+| Then {CD²: 1, CP²: -1, BO²: 1, NO²: -1, EF²: -1, MN²: 1} + -1 x {CD²: 1, CP²: -1, EF²: -1, EX²: 1}
+|    = {BO²: 1, NO²: -1, MN²: 1, EX²: -1}
+| Premise EX:MN = OX:NO gives a linear equation with coefficients {EX²: 1, MN²: -1, NO²: 1, OX²: -1}
+| Then {BO²: 1, NO²: -1, MN²: 1, EX²: -1} + 1 x {EX²: 1, MN²: -1, NO²: 1, OX²: -1}
+|    = {BO²: 1, OX²: -1}
+We are left with a linear equation with coefficients {BO²: 1, OX²: -1} that gives OX = BO
+
+End of proof.
