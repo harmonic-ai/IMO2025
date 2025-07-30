@@ -6,7 +6,7 @@ Determine all possible values of $a_1$.
 Answer: All integers of the form $6 \cdot 12^a \cdot m$, for $a \geq 0$ and $m$ is coprime to 10.
 -/
 
-import Mathlib
+import HarmonicLean.Imports
 
 open scoped BigOperators
 open scoped Real
@@ -31,6 +31,10 @@ set_option pp.letVarTypes true
 set_option pp.piBinderTypes true
 
 set_option linter.all false
+
+noncomputable section
+
+namespace IMO2025P4Solve2
 
 /-
 The following definition is not explicitly present in the provided text, but is referred to as "Definition def:s_N". We formalize it here for use in the lemmas.

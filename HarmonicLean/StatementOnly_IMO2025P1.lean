@@ -7,7 +7,7 @@ Let $n \geqslant 3$ be a given integer. Determine all nonnegative integers $k$ s
 Answer: 0, 1, 3
 -/
 
-import Mathlib
+import HarmonicLean.Imports
 
 open scoped BigOperators
 open scoped Real
@@ -32,6 +32,10 @@ set_option pp.letVarTypes true
 set_option pp.piBinderTypes true
 
 set_option linter.all false
+
+noncomputable section
+
+namespace IMO2025P1Statement
 
 theorem main_theorem
   (n : ℕ)

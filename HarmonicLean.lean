@@ -1,1 +1,10 @@
-import HarmonicLean.Attrs
+import HarmonicLean.StatementOnly_IMO2025P1
+import HarmonicLean.StatementOnly_IMO2025P3
+import HarmonicLean.StatementOnly_IMO2025P4
+import HarmonicLean.StatementOnly_IMO2025P5
+import HarmonicLean.StatementOnly_IMO2025P6
+import HarmonicLean.IMO2025P1
+import HarmonicLean.IMO2025P3
+import HarmonicLean.IMO2025P4
+import HarmonicLean.IMO2025P4_Solve2
+import HarmonicLean.IMO2025P5

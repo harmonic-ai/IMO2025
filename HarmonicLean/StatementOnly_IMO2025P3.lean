@@ -8,7 +8,7 @@ $f(n)\leqslant cn$ for all bonza functions $f$ and all positive integers $n$.
 Answer: 4
 -/
 
-import HarmonicLean
+import HarmonicLean.Imports
 
 open scoped BigOperators
 open scoped Real
@@ -33,6 +33,10 @@ set_option pp.letVarTypes true
 set_option pp.piBinderTypes true
 
 set_option linter.all false
+
+noncomputable section
+
+namespace IMO2025P3Statement
 
 theorem main_theorem (IsBonza : (ℕ+ → ℕ+) → Prop)
   (hisBonza : ∀ f, IsBonza f ↔ ∀ a b : ℕ+, (b : ℕ) ^ (a : ℕ) ≡ (f b : ℕ) ^ (f a : ℕ) [MOD f a]) :

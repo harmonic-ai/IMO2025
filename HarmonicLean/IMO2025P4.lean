@@ -6,7 +6,7 @@ Determine all possible values of $a_1$.
 Answer: All integers of the form $6 \cdot 12^a \cdot m$, for $a \geq 0$ and $m$ is coprime to 10.
 -/
 
-import Mathlib
+import HarmonicLean.Imports
 
 open scoped BigOperators
 open scoped Real
@@ -31,6 +31,10 @@ set_option pp.letVarTypes true
 set_option pp.piBinderTypes true
 
 set_option linter.all false
+
+noncomputable section
+
+namespace IMO2025P4
 
 /-
 Let $N$ be a positive integer with at least three proper divisors. Let its positive divisors in ascending order be $1=c_1 < c_2 < c_3 < c_4 < \dots$. The three largest proper divisors of $N$ are $N/c_2, N/c_3, N/c_4$. We define the function $S(N)$ as the sum of these three divisors: $S(N) = \frac{N}{c_2} + \frac{N}{c_3} + \frac{N}{c_4}$. The sequence in the problem is defined by $a_{n+1} = S(a_n)$.

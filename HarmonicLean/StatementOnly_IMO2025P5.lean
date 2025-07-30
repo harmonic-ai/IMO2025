@@ -13,7 +13,7 @@ Determine all values of $\lambda$ for which Alice has a winning strategy and all
 Answer: Alice wins if $\lambda > 1 / \sqrt{2}$. Bazza wins if $0 < \lambda < 1 / \sqrt{2}$.
 -/
 
-import Mathlib
+import HarmonicLean.Imports
 
 open scoped BigOperators
 open scoped Real
@@ -40,6 +40,8 @@ set_option pp.piBinderTypes true
 set_option linter.all false
 
 noncomputable section
+
+namespace IMO2025P5Statement
 
 /- Alice's strategy: given a tuple of nonnegative reals of even length,
 yields the next number. -/
